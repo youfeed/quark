@@ -2,6 +2,9 @@
 
 Mobile UI Components built on Web Components.
 
+## Features
+
+- Support Vue & React
 ## License
 
 [elf](https://github.com/allan2coder/elf) is released
