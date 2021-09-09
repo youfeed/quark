@@ -1,6 +1,6 @@
 {
   "name": "elfd",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Mobile UI Components built on Web Components.",
   "main": "./components/index.js",
   "browser": "./components/index.js",
