@@ -2,11 +2,11 @@
   "name": "elfd",
   "version": "0.0.2",
   "description": "Mobile UI Components built on Web Components.",
-  "main": "./index.mjs",
-  "browser": "./index.mjs",
-  "module": "./index.mjs",
-  "exports": "./index.mjs",
-  "unpkg": "./index.mjs",
+  "main": "./index.js",
+  "browser": "./index.js",
+  "module": "./index.js",
+  "exports": "./index.js",
+  "unpkg": "./index.js",
   "files": [
     "src",
     "demo"
