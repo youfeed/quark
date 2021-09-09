@@ -1,0 +1,29 @@
+{
+  "name": "elf",
+  "version": "0.0.1",
+  "description": "Mobile UI Components built on Web Components.",
+  "main": "./index.mjs",
+  "browser": "./index.mjs",
+  "module": "./index.mjs",
+  "exports": "./index.mjs",
+  "unpkg": "./index.mjs",
+  "files": [
+    "src",
+    "demo"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allan2coder/elf.git"
+  },
+  "keywords": [
+    "elf",
+    "ui",
+    "Web Component"
+  ],
+  "author": "allan",
+  "bugs": {
+    "url": "https://github.com/allan2coder/elf/issues"
+  },
+  "homepage": "https://github.com/allan2coder/elf#readme",
+  "license": "MIT"
+}
