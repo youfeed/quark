@@ -1,6 +1,6 @@
 {
   "name": "elfd",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Mobile UI Components built on Web Components.",
   "main": "./src/index.js",
   "browser": "./src/index.js",
@@ -13,7 +13,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/allan2coder/elfd.git"
+    "url": "git+https://github.com/allan2coder/elf-design.git"
   },
   "keywords": [
     "elfd",
@@ -22,8 +22,8 @@
   ],
   "author": "allan",
   "bugs": {
-    "url": "https://github.com/allan2coder/elfd/issues"
+    "url": "https://github.com/allan2coder/elf-design/issues"
   },
-  "homepage": "https://github.com/allan2coder/elfd#readme",
+  "homepage": "https://github.com/allan2coder/elf-design#readme",
   "license": "MIT"
 }

@@ -12,7 +12,7 @@ Elf-design /elf/ 是一个基于 Web Components 的 UI 组件库。它是一个�
 ## cdn 使用
 
 ```
-<script type="module" src="https://unpkg.com/xy-ui"></script>
+<script type="module" src="https://unpkg.com/elfd@latest/src/index.js"></script>
 ```
 
 ## Vue 技术栈使用
