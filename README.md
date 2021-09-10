@@ -12,7 +12,7 @@ Mobile UI Components built on Web Components.
 <script type="module" src="https://unpkg.com/xy-ui"></script>
 ```
 
-## vue 项目注意
+## Vue 技术栈使用
 
 直接使用 Web Component 会告警，`Unknown custom element: <user-card> - did you register the component correctly? For recursive components, make sure to provide the "name" option.`，因此请先注册需要忽略的标签：
 ```js
@@ -24,6 +24,9 @@ Vue.config.ignoredElements = [
 ]
 ```
 
+## React 技术栈使用
+
+当作原生 dom 元素直接使用。
 ## web component 外部样式引入
 
 ```js
