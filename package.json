@@ -1,14 +1,15 @@
 {
   "name": "elfd",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Mobile UI Components built on Web Components.",
   "main": "./index.js",
   "browser": "./index.js",
   "module": "./index.js",
   "exports": "./index.js",
-  "unpkg": "./index.js",
+  "unpkg": "./components/index.js",
   "files": [
     "src",
+    "components",
     "example"
   ],
   "repository": {
@@ -18,7 +19,7 @@
   "keywords": [
     "elfd",
     "ui",
-    "Web Component"
+    "Web Components"
   ],
   "author": "allan",
   "bugs": {

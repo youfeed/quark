@@ -12,14 +12,19 @@ Elf-design /elf/ 是一个基于 Web Components 的 UI 组件库。它是一个�
 ## cdn 使用
 
 ```
-<script type="module" src="https://unpkg.com/elfd@latest/src/index.js"></script>
+<script type="module" src="https://unpkg.com/elfd@latest/index.js"></script>
 ```
 
 ## Vue 技术栈使用
 
 当作原生 dom 元素直接使用即可。
 
-ps：直接使用 Web Component 会告警，`Unknown custom element: <user-card> - did you register the component correctly? For recursive components, make sure to provide the "name" option.`，因此请先注册需要忽略的标签：
+ps：直接使用 Web Component 会告警：
+```js
+Unknown custom element: <user-card> - did you register the component correctly? For recursive components, make sure to provide the "name" option.
+```
+
+因此请先注册需要忽略的标签：
 
 ```js
 Vue.config.ignoredElements = [
