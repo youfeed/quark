@@ -1,4 +1,4 @@
-# Elf
+# elf-design
 
 Mobile UI Components built on Web Components.
 
@@ -26,7 +26,12 @@ Vue.config.ignoredElements = [
 
 ## React 技术栈使用
 
+<<<<<<< HEAD
 当作原生 dom 元素直接使用。
+=======
+同理，当作原生 dom 元素直接使用即可。
+
+>>>>>>> 3212e029a7a43a548be95857fe75194517fc8e64
 ## web component 外部样式引入
 
 ```js
