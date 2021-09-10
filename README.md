@@ -1,10 +1,14 @@
-# elf-design /elf/
+# Elf-design
 
-Mobile UI Components built on Web Components.
+Elf-design /elf/ 是一个基于 web components 的 UI 组件库，可在 React、Vue 等跨技术栈使用。
+
+
 
 ## Features
 
-- Support Vue & React
+- Fast.
+- Web Components.
+- Simple.
 
 ## cdn 使用
 
