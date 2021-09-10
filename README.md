@@ -1,4 +1,4 @@
-# Elf
+# elf-design
 
 Mobile UI Components built on Web Components.
 
@@ -23,6 +23,10 @@ Vue.config.ignoredElements = [
   /^ion-/
 ]
 ```
+
+## React 技术栈使用
+
+同理，当作原生 dom 元素直接使用即可。
 
 ## web component 外部样式引入
 
