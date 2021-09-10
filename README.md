@@ -1,6 +1,6 @@
-# Elf-design
+# Blockshop
 
-Elf-design /elf/ 是一个基于 Web Components 的 UI 组件库。它是一个不局限于框架的组件复用（可在 Angular、React、Vue 等跨技术栈使用）。
+Blockshop 是一个基于 Web Components 的 UI 组件库。它是一个不局限于框架的组件复用（可在 Angular、React、Vue 等跨技术栈使用）。
 
 
 ## Features
@@ -12,7 +12,7 @@ Elf-design /elf/ 是一个基于 Web Components 的 UI 组件库。它是一个�
 ## cdn 使用
 
 ```
-<script type="module" src="https://unpkg.com/elfd"></script>
+<script type="module" src="https://unpkg.com/blockshop"></script>
 ```
 
 ## Vue 技术栈使用
@@ -43,5 +43,5 @@ Vue.config.ignoredElements = [
 
 ## License
 
-[elf](https://github.com/allan2coder/elf) is released
+[elf](https://github.com/allan2coder/blockshop) is released
 under the MIT License. See the bundled [LICENSE](./LICENSE) file for details.
