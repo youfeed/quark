@@ -24,6 +24,27 @@ Vue.config.ignoredElements = [
 ]
 ```
 
+## web component 外部样式引入
+
+```js
+import styles from './range.css';
+class uiRange extends HTMLElement {
+    constructor () {
+        super();
+
+        let shadow = this.attachShadow({
+            mode: 'open'
+        });
+        shadow.adoptedStyleSheets = [styles];
+    }
+    ...
+}
+if (!customElements.get('ui-range')) {
+    customElements.define('ui-range', uiRange);
+}
+```
+
+
 ## License
 
 [elf](https://github.com/allan2coder/elf) is released

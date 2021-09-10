@@ -61,7 +61,11 @@ class UserCard extends HTMLElement {
   constructor() {
     super();
 
-    const shadowRoot = this.attachShadow({ mode: 'closed' });
+  }
+
+  // 首次挂载 dom
+  connectedCallback() {
+    const shadowRoot = this.attachShadow({ mode: 'open' });
     shadowRoot.appendChild(template.content.cloneNode(true));
     
     // 设置外来参数
@@ -73,9 +77,11 @@ class UserCard extends HTMLElement {
     // 添加事件
     shadowRoot.querySelector('button').addEventListener('click', (e) => {
       // do something
-      console.log('click !');
+      alert('click !');
     });
   }
 }
 
-customElements.define('user-card', UserCard);
+if (!customElements.get('user-card')) {
+  customElements.define('user-card', UserCard);
+}

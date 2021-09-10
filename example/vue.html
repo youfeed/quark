@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Vue demo </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+    <script type="module" src="../src/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+
+  </head>
+  <body>
+    <h1>这是一个 Vue 工程!</h1>
+    <div id="app">
+      <user-card
+        v-for="item in items"
+        @click="handleClick(item)"
+        :image='item.image'
+        :name='item.name'
+        :email="item.email"
+      ></user-card>
+    </div>
+    
+  </body>
+  <script>
+    // 忽略 vue 中自定义标签会告警
+    Vue.config.ignoredElements = [
+      'user-card',
+    ]
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        items: [{
+          image: 'https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg',
+          name: 'Allan',
+          email: 'Allan@hb.com',
+        },{
+          image: 'https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg',
+          name: 'stark',
+          email: 'stark@hb.com',
+        },{
+          image: 'https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg',
+          name: 'Ray',
+          email: 'Ray@hb.com',
+        }],
+        msg: 'test'
+      },
+      methods: {
+        handleClick(item){
+          console.log(item);
+        }
+      }
+    })
+  </script>
+</html>
