@@ -29,26 +29,6 @@ Vue.config.ignoredElements = [
 
 同理，当作原生 dom 元素直接使用即可。
 
-## web component 外部样式引入
-
-```js
-import styles from './range.css';
-class uiRange extends HTMLElement {
-    constructor () {
-        super();
-
-        let shadow = this.attachShadow({
-            mode: 'open'
-        });
-        shadow.adoptedStyleSheets = [styles];
-    }
-    ...
-}
-if (!customElements.get('ui-range')) {
-    customElements.define('ui-range', uiRange);
-}
-```
-
 
 ## License
 
