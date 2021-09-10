@@ -43,5 +43,5 @@ Vue.config.ignoredElements = [
 
 ## License
 
-[elf](https://github.com/allan2coder/blockshop) is released
+[blockshop](https://github.com/allan2coder/blockshop) is released
 under the MIT License. See the bundled [LICENSE](./LICENSE) file for details.
