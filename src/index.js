@@ -1,1 +1,1 @@
-import './user-card.js';
+import './user-card.mjs';
