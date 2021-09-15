@@ -1,17 +1,17 @@
-# Icon 图标
+# 加载 Loading 
 
 ### 介绍
 
-基于 IconFont 字体的图标集，可以通过 Icon 组件使用。
+加载 loading。
 
 ## 代码演示
 
 ### 基础用法
 
-`Icon` 的 `name` 属性支持传入图标名称或图片链接。
+添加loading属性即可让按钮处于加载状态，处于加载状态所有事件会被禁用，类似于disabled：
 
 ```html
-<cs-icon name="user" size="30" color="orangered"></cs-icon>
+<cs-button type="primary" loading>loading</cs-button>
 ```
 
 ### 图标颜色
