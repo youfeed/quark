@@ -1,0 +1,52 @@
+{
+  "versions": [
+    {
+      "name": "1.x",
+      "link": "/"
+    }
+  ],
+  "nav": [
+    {
+      "name": "基础组件",
+      "enName": "base",
+      "packages": [
+        {
+          "version": "0.0.1",
+          "name": "Button",
+          "sort": 1,
+          "cName": "按钮",
+          "type": "component",
+          "show": true,
+          "desc": "按钮",
+          "author": "xsf"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Card",
+          "sort": 1,
+          "cName": "卡片",
+          "type": "component",
+          "show": true,
+          "desc": "卡片",
+          "author": "xsf"
+        }
+      ]
+    }
+  ],
+  "header": [],
+  "docs": {
+    "name": "指南",
+    "packages": [
+      {
+        "name": "intro",
+        "cName": "介绍",
+        "show": true
+      },
+      {
+        "name": "start",
+        "cName": "快速上手",
+        "show": true
+      }
+    ]
+  }
+}
