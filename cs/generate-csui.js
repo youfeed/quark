@@ -2,35 +2,26 @@ const package = require('../package.json');
 const config = require('../src/config.json');
 const path = require('path');
 const fs = require('fs-extra');
-let importStr = `import { App } from 'vue';\n`;
+// let importStr = `import { App } from 'vue';\n`;
+let importStr = '';
 const packages = [];
+
 config.nav.map((item) => {
   item.packages.forEach((element) => {
     let { name, show, type, exportEmpty } = element;
     if (show || exportEmpty) {
-      importStr += `import ${name} from './__VUE/${name.toLowerCase()}/index${
-        type === 'methods' ? '' : '.vue'
-      }';\n`;
+      importStr += `import './__VUE/${name.toLowerCase()}/cs-${name.toLocaleLowerCase()}.mjs';\n`;
       packages.push(name);
     }
   });
 });
-let installFunction = `function install(app: App) {
-  const packages = [${packages.join(',')}];
-  packages.forEach((item:any) => {
-    if (item.install) {
-      app.use(item);
-    } else if (item.name) {
-      app.component(item.name, item);
-    }
-  });
-}`;
-let fileStr = `${importStr}
-${installFunction}
-export { install, ${packages.join(',')}  };
-export default { install, version:'${package.version}'};`;
+
+console.log(importStr, packages, 89); // [Button,Card]
+
+let fileStr = `${importStr}`;
+
 fs.outputFile(
-  path.resolve(__dirname, '../src/packages/csui.vue.ts'),
+  path.resolve(__dirname, '../src/packages/index.js'),
   fileStr,
   'utf8',
   (error) => {

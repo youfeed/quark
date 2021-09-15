@@ -56,7 +56,7 @@ template.innerHTML = `
   </div>
 `;
 
-class UserCard extends HTMLElement {
+class CsCard extends HTMLElement {
   constructor() {
     super();
 
@@ -81,6 +81,6 @@ class UserCard extends HTMLElement {
   }
 }
 
-if (!customElements.get('user-card')) {
-  customElements.define('user-card', UserCard);
+if (!customElements.get('cs-card')) {
+  customElements.define('cs-card', CsCard);
 }

@@ -7,6 +7,7 @@
   "style": "dist/style.css",
   "typings": "dist/index.d.ts",
   "keywords": [
+    "web components",
     "vue",
     "webpack",
     "vite"

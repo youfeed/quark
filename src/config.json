@@ -29,6 +29,26 @@
           "show": true,
           "desc": "卡片",
           "author": "xsf"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Loading",
+          "sort": 1,
+          "cName": "加载动画",
+          "type": "component",
+          "show": true,
+          "desc": "加载动画",
+          "author": "xsf"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Icon",
+          "sort": 1,
+          "cName": "图标",
+          "type": "component",
+          "show": true,
+          "desc": "图标",
+          "author": "xsf"
         }
       ]
     }

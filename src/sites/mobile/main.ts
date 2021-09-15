@@ -7,5 +7,5 @@ import '@/packages/utils/touchEmulator';
 
 createApp(App)
   .use(router)
-  .use(Csui)
+  // .use(Csui)
   .mount('#app');
