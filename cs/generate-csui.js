@@ -2,7 +2,6 @@ const package = require('../package.json');
 const config = require('../src/config.json');
 const path = require('path');
 const fs = require('fs-extra');
-// let importStr = `import { App } from 'vue';\n`;
 let importStr = '';
 const packages = [];
 
