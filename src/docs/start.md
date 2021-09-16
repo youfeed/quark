@@ -21,15 +21,17 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- 引入 js -->
-    <script type="module" src="../src/index.js"></script>
+    <script type="module" src="https://unpkg.com/cubeshop"></script>
+    <!-- // 或
+    <script type="module" src="https://cdn.jsdelivr.net/npm/cubeshop"></script> -->
   </head>
   <body>
 
-    <user-card
+    <cs-card
       image='https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg'
       name='Ray'
       email="Ray@hb.com"
-    ></user-card>
+    ></cs-card>
     
 </html>
 
@@ -37,7 +39,8 @@
 
 ## 注意事项
 
-- Vue 中使用组件会告警：
+- Vue 工程中使用组件可能会出现告警：
+
 ```html
 <!-- vue2: -->
 Unknown custom element: <cs-card> - did you register the component correctly? For recursive components, make sure to provide the "name" option.
@@ -45,12 +48,33 @@ Unknown custom element: <cs-card> - did you register the component correctly? Fo
 [Vue warn]: Failed to resolve component: cs-icon 
 ```
 
-注册需要忽略的标签：
+别急，请在工程中注入如下代码即可：
 
+```js
+// VUE2.x
+Vue.config.ignoredElements = [/^cs-/]
+
+// VUE3.x
+// https://v3.cn.vuejs.org/guide/migration/global-api.html#config-productiontip-%E7%A7%BB%E9%99%A4
+const app = createApp({})
+app.config.compilerOptions.isCustomElement = tag => tag.startsWith('cs-')
 ```
-Vue.config.ignoredElements = [
-  /^cs-/
-]
+
+如果您使用的是 vite，修改 vite.config.js:
+
+```js
+import vue from '@vitejs/plugin-vue'
+export default {
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: tag => tag === 'cs-'
+        }
+      }
+    })
+  ]
+}
 ```
 
 - 组件 css 单位使用的是 **px**，如果你的项目中需要 **rem** 单位，可借助一些工具进行转换，比如 [webpack](https://www.webpackjs.com/) 的 [px2rem-loader](https://www.npmjs.com/package/px2rem-loader)、[postcss](https://github.com/postcss/postcss) 的 [postcss-plugin-px2rem](https://www.npmjs.com/package/postcss-plugin-px2rem) 插件等
