@@ -1,10 +1,9 @@
 # Cubeshop
 
-![image](https://miro.medium.com/max/2000/1*-zkpV1IfOv-1dux6ZqWBCQ.png)
-Image from [codeburst](https://codeburst.io/building-efficient-components-6ee2bdaea542) by [@webrealizer](https://twitter.com/webrealizer)
-
 Cubeshop 是一个基于 Web Components 的 UI 组件库。它是一个不局限于框架的组件复用（可在 Angular、React、Vue 等跨技术栈使用）。
 
+![image](https://miro.medium.com/max/2000/1*-zkpV1IfOv-1dux6ZqWBCQ.png)
+Image from [codeburst](https://codeburst.io/building-efficient-components-6ee2bdaea542) by [@webrealizer](https://twitter.com/webrealizer)
 
 ## Features
 
