@@ -3,7 +3,7 @@
     <input
       type="text"
       class="search-input"
-      placeholder="在 Csui 中搜索"
+      placeholder="在 Cubeshop 中搜索"
       v-model="data.searchVal"
       @focus="onfocus"
       @blur="onblur"

@@ -45,13 +45,13 @@ fs.outputFile(
   }
 );
 
-fs.outputFile(
-  path.resolve(__dirname, '../dist/index.d.ts'),
-  `import * as Csui from './csui';
-export default Csui;
-export * from './csui';`,
-  'utf8',
-  (error) => {
-    // logger.success();
-  }
-);
+// fs.outputFile(
+//   path.resolve(__dirname, '../dist/index.d.ts'),
+//   `import * as Csui from './csui';
+// export default Csui;
+// export * from './csui';`,
+//   'utf8',
+//   (error) => {
+//     // logger.success();
+//   }
+// );

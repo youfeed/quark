@@ -5,7 +5,7 @@
 
 > 扫描下方二维码体验，体验：
 
-<img src="xx" width="200" alt="Csui">
+<img src="xx" width="200" alt="cubeshop">
 
 #### CDN 安装使用示例
 
