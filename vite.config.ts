@@ -33,7 +33,12 @@ export default defineConfig({
   },
   plugins: [
     vue({
-      include: [/\.vue$/, /\.md$/]
+      include: [/\.vue$/, /\.md$/],
+      template: {
+        compilerOptions: {
+          isCustomElement: tag => tag.startsWith('cs-')
+        }
+      }
     }),
     Markdown({
       // default options passed to markdown-it

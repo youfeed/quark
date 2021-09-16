@@ -3,7 +3,7 @@
   "semi": true,
   "bracketSpacing": true,
   "tabWidth": 2,
-  "useTabs": false,
+  "useTabs": true,
   "htmlWhitespaceSensitivity": "strict",
   "trailingComma": "none"
 }

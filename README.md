@@ -37,10 +37,13 @@ Image from [codeburst](https://codeburst.io/building-efficient-components-6ee2bd
 
 ##  注意
 
-在 Vue 项目中，您可能会遇到 `Unknown custom element` 告警：
+- Vue 工程中使用组件可能会出现告警：
 
-```js
+```html
+<!-- vue2: -->
 Unknown custom element: <cs-card> - did you register the component correctly? For recursive components, make sure to provide the "name" option.
+<!-- vue3 -->
+[Vue warn]: Failed to resolve component: cs-icon 
 ```
 
 别急，请在工程中注入如下代码即可：
@@ -54,6 +57,120 @@ Vue.config.ignoredElements = [/^cs-/]
 const app = createApp({})
 app.config.compilerOptions.isCustomElement = tag => tag.startsWith('cs-')
 ```
+
+如果您使用的是 vite，修改 vite.config.js:
+
+```js
+import vue from '@vitejs/plugin-vue'
+export default {
+  plugins: [
+    vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: tag => tag === 'cs-'
+        }
+      }
+    })
+  ]
+}
+```
+
+## Example
+
+### Vue 工程使用
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> Vue demo </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" src="https://unpkg.com/cubeshop"></script>
+    <!-- vue cdn 引入 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+  </head>
+  <body>
+    <h1>这是一个 Vue 工程!</h1>
+    <div id="app">
+      <cs-card
+        v-for="item in items"
+        @click="handleClick(item)"
+        :image='item.image'
+        :name='item.name'
+        :email="item.email"
+      ></cs-card>
+    </div>
+  </body>
+  <script>
+    // 忽略 vue 中自定义标签会告警
+    Vue.config.ignoredElements = [
+      'user-card',
+    ]
+    var vm = new Vue({
+      el: '#app',
+      data: {
+        items: [{
+          image: 'https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg',
+          name: 'Allan',
+          email: 'Allan@hb.com',
+        },{
+          image: 'https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg',
+          name: 'stark',
+          email: 'stark@hb.com',
+        },{
+          image: 'https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg',
+          name: 'Ray',
+          email: 'Ray@hb.com',
+        }],
+        msg: 'test'
+      },
+      methods: {
+        handleClick(item){
+          alert(item);
+        }
+      }
+    })
+  </script>
+</html>
+```
+### React 工程使用
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title> React demo </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script type="module" src="https://unpkg.com/cubeshop"></script>
+    <!-- React cdn -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/react/16.13.1/umd/react.production.min.js"></script>
+    <script src="https://cdn.bootcdn.net/ajax/libs/react-dom/16.13.1/umd/react-dom.production.min.js"></script>
+    <!--  Babel 可以将 ES6 代码转为 ES5 -->
+    <script src="https://cdn.bootcdn.net/ajax/libs/babel-standalone/7.0.0-beta.3/babel.min.js"></script>
+  </head>
+  <body>
+    <h1>这是一个 React 工程!</h1>
+    <div id="app"></div>
+  </body>
+  <script type="text/babel">
+    class App extends React.Component {
+      render() {
+        return (
+          <div>
+            <cs-card
+              image='https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg'
+              name='Ray'
+              email="Ray@hb.com"
+            ></cs-card>
+          </div>
+        );
+      }
+    }
+    ReactDOM.render(<App/>, document.getElementById('app'));
+  </script>
+</html>
+```
+
 
 ## License
 
