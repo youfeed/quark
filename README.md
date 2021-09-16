@@ -21,7 +21,7 @@ Image from [codeburst](https://codeburst.io/building-efficient-components-6ee2bd
 
 ## npm 使用
 
-敬请期待
+敬请期待......
 
 ## Vue/React 中使用
 
