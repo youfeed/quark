@@ -1,4 +1,4 @@
-[image](https://miro.medium.com/max/2000/1*-zkpV1IfOv-1dux6ZqWBCQ.png)
+![image](https://miro.medium.com/max/2000/1*-zkpV1IfOv-1dux6ZqWBCQ.png)
 Image from [codeburst](https://codeburst.io/building-efficient-components-6ee2bdaea542) by [@webrealizer](https://twitter.com/webrealizer)
 # Cubeshop
 

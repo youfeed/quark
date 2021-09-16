@@ -40,10 +40,9 @@ export default class CsButton extends HTMLElement {
             background:rgba(0,0,0,.1); 
         }
         :host([disabled]) .btn,:host([loading]) .btn{ 
-            cursor: not-allowed; 
-            pointer-events: all; 
+            cursor: not-allowed;
+            pointer-events: all;
         }
-        :host(:not([type="primary"]):not([type="danger"]):not([disabled]):hover),
         :host(:not([type="primary"]):not([type="danger"]):focus-within),
         :host([type="flat"][focus]){ 
             color:var(--themeColor,#0088FF); 
@@ -79,12 +78,6 @@ export default class CsButton extends HTMLElement {
             bottom:0; 
             opacity:0; 
             transition:.3s;
-        }
-        :host([type="flat"]:not([disabled]):hover) .btn::before{ 
-            opacity:.1 
-        }
-        :host(:not([disabled]):hover){ 
-            z-index:1 
         }
         :host([type="flat"]:focus-within) .btn:before,
         :host([type="flat"][focus]) .btn:before{ 
