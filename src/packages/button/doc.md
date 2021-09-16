@@ -13,10 +13,9 @@
 ```html
 <cs-button type="primary">主要按钮</cs-button>
 <cs-button type="info">信息按钮</cs-button>
-<cs-button type="default">默认按钮</cs-button>
 <cs-button type="danger">危险按钮</cs-button>
+<cs-button type="default">默认按钮</cs-button>
 <cs-button type="warning">警告按钮</cs-button>
-<cs-button type="success">成功按钮</cs-button>
 ```
 
 ### 禁用状态
@@ -43,24 +42,6 @@
 ```html
 <cs-button loading type="info"></cs-button>
 <cs-button loading type="warning">加载中...</cs-button>
-<cs-button :loading="isLoading" type="success" @click="changeLoading">Click me!</cs-button>
-```
-
-``` javascript
-  // ...
-  let isLoading = ref(false);
-  const changeLoading = () => {
-    isLoading.value = true;
-    setTimeout(() => {
-      isLoading.value = false;
-    }, 3000);
-  };
-
-  return {
-    isLoading,
-    changeLoading
-  };
-  // ...
 ```
 
 ### 图标按钮

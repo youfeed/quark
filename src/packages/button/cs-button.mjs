@@ -56,6 +56,10 @@ export default class CsButton extends HTMLElement {
             color: #fff; 
             background:var(--themeBackground,var(--dangerColor,#ff7875));
         }
+        :host([type="warning"]){ 
+            color: #fff; 
+            background:var(--themeBackground,var(--warningColor,#ff9e0d));
+        }
         :host([type="info"]){ 
             color: #fff; 
             background:var(--themeBackground,var(--infoColor,#07C160));
@@ -143,10 +147,6 @@ export default class CsButton extends HTMLElement {
         return this.getAttribute('disabled')!==null;
     }
 
-    get toggle() {
-        return this.getAttribute('toggle')!==null;
-    }
-
     get htmltype() {
         return this.getAttribute('htmltype');
     }
@@ -231,11 +231,6 @@ export default class CsButton extends HTMLElement {
                 const { left, top } = this.getBoundingClientRect();
                 this.style.setProperty('--x',(ev.clientX - left)+'px');
                 this.style.setProperty('--y',(ev.clientY - top)+'px');
-            }
-        })
-        this.addEventListener('click',function(ev){
-            if(this.toggle){
-                this.checked=!this.checked;
             }
         })
         this.disabled = this.disabled;
