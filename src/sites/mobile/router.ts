@@ -18,9 +18,6 @@ const findComponentName = (name: string) => {
         (i) => i.name.toLowerCase() === name
       );
       if (idx !== -1) {
-
-        console.log(element.packages[idx].name, 9);
-        
         return element.packages[idx].name;
       }
     }

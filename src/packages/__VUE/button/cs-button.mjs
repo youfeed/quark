@@ -20,7 +20,7 @@ export default class CsButton extends HTMLElement {
             overflow:hidden;
             align-items:center;
             justify-content: center;
-            border:1px solid var(--borderColor,rgba(0,0,0,.2));
+            border:1px solid var(--borderColor,#E1E6EB);
             font-size: 14px;
             color: var(--fontColor,#333);
             border-radius: var(--borderRadius,8px);
@@ -59,7 +59,7 @@ export default class CsButton extends HTMLElement {
         }
         :host([type="info"]){ 
             color: #fff; 
-            background:var(--themeBackground,var(--dangerColor,#ff7875));
+            background:var(--themeBackground,var(--infoColor,#07C160));
         }
         :host([type="dashed"]){ 
             border-style:dashed 
@@ -243,15 +243,6 @@ export default class CsButton extends HTMLElement {
         this.addEventListener('click',function(ev){
             if(this.toggle){
                 this.checked=!this.checked;
-            }
-        })
-        this.btn.addEventListener('keydown', (ev) => {
-            switch (ev.keyCode) {
-                case 13://Enter
-                    ev.stopPropagation();
-                    break;
-                default:
-                    break;
             }
         })
         this.disabled = this.disabled;
