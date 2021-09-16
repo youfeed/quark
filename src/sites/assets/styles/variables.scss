@@ -1,12 +1,5 @@
 // doc
 $doc-default-color: #fa2c19;
-$doc-default-primary-bg: linear-gradient(
-  135deg,
-  rgba(250, 25, 44, 1) 0%,
-  rgba(250, 39, 40, 1) 45%,
-  rgba(250, 56, 31, 1) 83%,
-  rgba(250, 63, 25, 1) 100%
-);
 
 // clolr
 // 红色
@@ -32,6 +25,7 @@ $theme-red-gradient: linear-gradient(
   rgba(250, 89, 25, 1) 83%,
   rgba(250, 100, 25, 1) 100%
 );
+
 // 白色
 $theme-white: #fff;
 $theme-white-word: #333;
@@ -73,21 +67,16 @@ $theme-black-footer-bg: #1d1d21;
 $theme-black-footer-border: transparent;
 $theme-black-theme-border: #666;
 $theme-black-circle: #333;
+
 // header
 $doc-default-header-color: $white;
-$doc-header-height: 64px;
-$doc-header-bg: url('../../assets/images/header-bg.png') no-repeat;
+$doc-header-height: 68px;
+
 // nav
-$doc-default-nav-bg: $white;
 $doc-default-nav-color: $title-color;
-// footer
-// $doc-default-header-color: $white;
-// $doc-footer-height: 73px;
-// home
-$theme-black-content-bg: #060506;
 
 //markdown-add-style
-$csui-doc-black: #323233;
+$csui-doc-black: #333;
 $csui-doc-blue: #1989fa;
 $csui-doc-purple: #8080ff;
 $csui-doc-fuchsia: #a7419e;
@@ -101,8 +90,7 @@ $csui-doc-light-grey: #ccc;
 $csui-doc-border-color: #f1f4f8;
 $csui-doc-code-color: #58727e;
 $csui-doc-code-background-color: #f1f4f8;
-$csui-doc-code-font-family: 'Source Code Pro', 'Monaco', 'Inconsolata',
-  monospace;
+$csui-doc-code-font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
 $csui-doc-padding: 24px;
 $csui-doc-row-max-width: 1680px;
 $csui-doc-nav-width: 220px;

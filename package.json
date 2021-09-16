@@ -1,12 +1,26 @@
 {
   "name": "cubeshop",
   "version": "0.0.11",
-  "description": "Web Components",
-  "main": "dist/csui.umd.js",
-  "module": "dist/csui.es.js",
-  "style": "dist/style.css",
-  "typings": "dist/index.d.ts",
+  "description": "Mobile UI Components built on Web Components.",
+  "main": "src/packages/index.js",
+  "module": "src/packages/index.js",
+  "unpkg": "src/packages/index.js",
+  "scripts": {
+    "checked": "npm run generate:file && tsc",
+    "dev": "npm run checked && vite --open --force",
+    "build": "npm run checked && vite build --config vite.config.build.ts && npm run generate:types && npm run generate:themes",
+    "serve": "vite preview",
+    "add": "node cs/createComponentMode.js",
+    "generate:file": "node cs/generate-csui.js",
+    "generate:types": "node cs/generate-types.js",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/allan2coder/cubeshop.git"
+  },
   "keywords": [
+    "src",
     "web components",
     "vue",
     "webpack",
@@ -17,17 +31,6 @@
     "README.md",
     "package.json"
   ],
-  "scripts": {
-    "checked": "npm run generate:file && tsc",
-    "dev": "npm run checked && vite --open --force",
-    "build": "npm run checked && vite build --config vite.config.build.ts && npm run generate:types && npm run generate:themes",
-    "serve": "vite preview",
-    "add": "node cs/createComponentMode.js",
-    "generate:file": "node cs/generate-csui.js",
-    "generate:types": "node cs/generate-types.js",
-    "generate:themes": "node cs/generate-themes.js",
-    "test": "jest"
-  },
   "dependencies": {
     "sass": "^1.34.0",
     "vue": "^3.0.5",

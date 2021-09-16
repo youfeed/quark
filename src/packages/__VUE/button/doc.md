@@ -19,15 +19,6 @@
 <cs-button type="success">成功按钮</cs-button>
 ```
 
-### 朴素按钮
-
-通过 `plain` 属性将按钮设置为朴素按钮，朴素按钮的文字为按钮颜色，背景为白色。
-
-```html
-<cs-button plain type="primary">朴素按钮</cs-button>
-<cs-button plain type="info">朴素按钮</cs-button>
-```
-
 ### 禁用状态
 
 通过 `disabled` 属性来禁用按钮，禁用状态下按钮不可点击。

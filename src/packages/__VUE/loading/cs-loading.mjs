@@ -12,7 +12,7 @@ export default class CsLoading extends HTMLElement {
             display:inline-flex;
             align-items: center;
             justify-content:center;
-            color:var(--themeColor,#42b983);
+            color:var(--themeColor,#0088FF);
         }
         .loading{
             display: block;

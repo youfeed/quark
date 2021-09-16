@@ -16,25 +16,19 @@ export default class CsButton extends HTMLElement {
             padding: .25em .625em;
             box-sizing:border-box;
             vertical-align: middle;
-            line-height: 1.8;
+            line-height: 2;
             overflow:hidden;
             align-items:center;
             justify-content: center;
             border:1px solid var(--borderColor,rgba(0,0,0,.2));
             font-size: 14px;
             color: var(--fontColor,#333);
-            border-radius: var(--borderRadius,.25em);
+            border-radius: var(--borderRadius,8px);
             transition:background .3s,box-shadow .3s,border-color .3s,color .3s;
         }
         :host([shape="circle"]){ 
             border-radius:50%;
         }
-        /*
-        :host(:not([disabled]):active){
-            z-index:1;
-            transform:translateY(.1em);
-        }
-        */
         :host([disabled]),:host([loading]){
             pointer-events: none; 
             opacity:.6; 
@@ -52,17 +46,18 @@ export default class CsButton extends HTMLElement {
         :host(:not([type="primary"]):not([type="danger"]):not([disabled]):hover),
         :host(:not([type="primary"]):not([type="danger"]):focus-within),
         :host([type="flat"][focus]){ 
-            color:var(--themeColor,#42b983); 
-            border-color: var(--themeColor,#42b983); 
-        }
-        :host(:not([type="primary"]):not([type="danger"])) .btn::after{ 
-            // background-image: radial-gradient(circle, var(--themeColor,#42b983) 10%, transparent 10.01%); 
+            color:var(--themeColor,#0088FF); 
+            border-color: var(--themeColor,#0088FF); 
         }
         :host([type="primary"]){ 
             color: #fff; 
-            background:var(--themeBackground,var(--themeColor,#42b983));
+            background:var(--themeBackground,var(--themeColor,#0088FF));
         }
         :host([type="danger"]){ 
+            color: #fff; 
+            background:var(--themeBackground,var(--dangerColor,#ff7875));
+        }
+        :host([type="info"]){ 
             color: #fff; 
             background:var(--themeBackground,var(--dangerColor,#ff7875));
         }
@@ -76,7 +71,7 @@ export default class CsButton extends HTMLElement {
         :host([type="flat"]) .btn::before{ 
             content:''; 
             position:absolute; 
-            background:var(--themeColor,#42b983);
+            background:var(--themeColor,#0088FF);
             pointer-events:none; 
             left:0; 
             right:0; 
@@ -94,9 +89,6 @@ export default class CsButton extends HTMLElement {
         :host([type="flat"]:focus-within) .btn:before,
         :host([type="flat"][focus]) .btn:before{ 
             opacity:.2; 
-        }
-        :host(:focus-within){ 
-            /*box-shadow: 0 0 10px rgba(0,0,0,0.1);*/ 
         }
         .btn{ 
             background:none; 
@@ -118,36 +110,8 @@ export default class CsButton extends HTMLElement {
         ::-moz-focus-inner{
             border:0;
         }
-        .btn::before{
-            content: "";
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left:0;
-            top:0;
-            transition:.2s;
-            background:#fff;
-            opacity:0;
-        }
         :host(:not([disabled]):active) .btn::before{ 
             opacity:.2;
-        }
-        .btn::after {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            left: var(--x,0); 
-            top: var(--y,0);
-            pointer-events: none;
-            // background-image: radial-gradient(circle, #fff 10%, transparent 10.01%);
-            background-repeat: no-repeat;
-            background-position: 50%;
-            transform: translate(-50%,-50%) scale(10);
-            opacity: 0;
-            transition: transform .3s, opacity .8s;
         }
         .btn:not([disabled]):active::after {
             transform: translate(-50%,-50%) scale(0);
@@ -346,7 +310,7 @@ class CsButtonGroup extends HTMLElement {
             display:inline-flex;
         }
         ::slotted(cs-button:not(:first-of-type):not(:last-of-type)){
-            border-radius:0;
+            border-radius:8px;
         }
         ::slotted(cs-button){
             margin:0!important;

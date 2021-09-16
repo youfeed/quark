@@ -2,7 +2,7 @@
 
 ### 介绍
 
-基于 IconFont 字体的图标集，可以通过 Icon 组件使用。
+基于 [IconFont](https://www.iconfont.cn/collections/detail?spm=a313x.7781069.1998910419.d9df05512&cid=9402) 字体的图标集，可以通过 Icon 组件使用。一共有 **599** 个图标可供使用。
 
 ## 代码演示
 
@@ -11,17 +11,9 @@
 `Icon` 的 `name` 属性支持传入图标名称或图片链接。
 
 ```html
-<cs-icon name="user" size="30" color="orangered"></cs-icon>
-```
-
-### 图标颜色
-
-`Icon` 的 `color` 属性用来设置图标的颜色。
-
-```html
-<cs-icon name="dongdong" color="#fa2c19"></cs-icon>
-<cs-icon name="dongdong" color="#64b578"></cs-icon>
-<cs-icon name="JD" color="#fa2c19"></cs-icon>
+<cs-icon size="20" name="heart"></cs-icon>
+<cs-icon size="20" name="location"></cs-icon>
+<cs-icon size="20" name="user"></cs-icon>
 ```
 
 ### 图标大小
@@ -29,76 +21,22 @@
 `Icon` 的 `size` 属性用来设置图标的尺寸大小，默认单位为 `px`。
 
 ```html
-<cs-icon name="dongdong"></cs-icon>
-<cs-icon name="dongdong" size="24"></cs-icon>
-<cs-icon name="dongdong" size="16"></cs-icon>
+<cs-icon size="18" name="location"></cs-icon>
+<cs-icon size="24" name="location"></cs-icon>
+<cs-icon size="30" name="location"></cs-icon>
 ```
 
-### 自定义图标
+### 图标颜色
 
-如果需要在现有 Icon 的基础上使用更多图标，可以引入第三方 iconfont 对应的字体文件和 CSS 文件，之后就可以在 Icon 组件中直接使用。
-
-> 方案一 引入 [iconfont](https://www.iconfont.cn/)   推荐此方案
-
-第一步：首先在 [iconfont](https://www.iconfont.cn/) 生成你自定义的Icon文件下载存放至本地项目  [详细使用说明](https://www.iconfont.cn/help/detail?spm=a313x.7781069.1998910419.d8d11a391&helptype=code)
-
-``` bash
-/assets/font/demo.css
-/assets/font/demo_index.html
-/assets/font/iconfont.css
-/assets/font/iconfont.js
-/assets/font/iconfont.json
-/assets/font/iconfont.ttf
-/assets/font/iconfont.woff
-/assets/font/iconfont.woff2
-```
-
-第二步：项目入口文件 main.js 引用 `iconfont.css`
-
-
-``` javascript
-import './assets/font/iconfont.css';
-```
-
-第三步：
+`Icon` 的 `color` 属性用来设置图标的颜色。
 
 ```html
-<!-- 
-  font-class-name 指定类名为默认 iconfont
-  class-prefix 指定默认 icon
-  name 值根据 iconfont.css 中值对应填写 
--->
-<cs-icon font-class-name="iconfont" class-prefix="icon" name="close" />
+<cs-icon size="40" name="heart" color="orangered"></cs-icon>
+<cs-icon size="40" name="heart" color="#1E90FF"></cs-icon>
+<cs-icon size="40" name="location" color="#F44336"></cs-icon>
+<cs-icon size="40" name="user" color="#3F51B5"></cs-icon>
 ```
 
-
-
-> 方案二 第三方自定义字体库
-
-```css
-/* 引入第三方或自定义的字体图标样式 */
-@font-face {
-  font-family: 'my-icon';
-  src: url('./my-icon.ttf') format('truetype');
-}
-
-.my-icon {
-  font-family: 'my-icon';
-}
-
-.my-icon-extra::before {
-  content: '\e626';
-}
-```
-
-```html
-<!-- 
-  font-class-name 指定类名为默认 my-icon
-  class-prefix 指定默认 my-icon
--->
-<cs-icon font-class-name="my-icon" class-prefix="my-icon" name="extra" />
-
-```
 
 ## API
 

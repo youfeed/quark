@@ -66,6 +66,11 @@
         "name": "start",
         "cName": "快速上手",
         "show": true
+      },
+      {
+        "name": "theme",
+        "cName": "主题设置",
+        "show": true
       }
     ]
   }
