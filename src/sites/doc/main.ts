@@ -8,6 +8,7 @@ import { Hover } from './directive/hover/hover';
 
 import { isMobile } from '@/sites/assets/util';
 
+// 移动端，仅展示 h5 页面，使用 demo.html
 if (isMobile) {
   location.replace('demo.html' + location.hash);
 }

@@ -37,19 +37,19 @@
 
 ## 注意事项
 
-- Vue 中直接使用组件会告警：
+- Vue 中使用组件会告警：
 ```html
-Unknown custom element: <user-card> - did you register the component correctly? For recursive components, make sure to provide the "name" option.
+<!-- vue2: -->
+Unknown custom element: <cs-card> - did you register the component correctly? For recursive components, make sure to provide the "name" option.
+<!-- vue3 -->
+[Vue warn]: Failed to resolve component: cs-icon 
 ```
 
 注册需要忽略的标签：
 
 ```
 Vue.config.ignoredElements = [
-  'user-card',
-  // 用一个 `RegExp` 忽略所有“ion-”开头的元素
-  // 仅在 2.5+ 支持
-  /^ion-/
+  /^cs-/
 ]
 ```
 
