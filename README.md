@@ -37,14 +37,13 @@ Image from [codeburst](https://codeburst.io/building-efficient-components-6ee2bd
 
 ##  注意
 
-在 Vue 中直接使用 Web Component 可能会出现如下告警
+在 Vue 项目中，您可能会遇到 `Unknown custom element` 告警：
 
 ```js
-Unknown custom element: <user-card> - did you register the component correctly? For recursive components, make sure to provide the "name" option.
+Unknown custom element: <cs-card> - did you register the component correctly? For recursive components, make sure to provide the "name" option.
 ```
 
-因此，请先注册需要忽略的标签：
-
+别急，请在工程中注入如下代码即可：
 
 ```js
 // VUE2.x
