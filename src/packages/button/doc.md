@@ -28,15 +28,6 @@
 <cs-button plain disabled type="primary">禁用状态</cs-button>
 ```
 
-### 按钮形状
-
-通过 `shape` 属性设置按钮形状，支持圆形、方形按钮，默认为圆形。
-
-```html
-<cs-button shape="square" type="primary">方形按钮</cs-button>
-<cs-button type="info">圆形按钮</cs-button>
-```
-
 ### 加载状态
 
 ```html
