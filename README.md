@@ -19,7 +19,15 @@ Image from [codeburst](https://codeburst.io/building-efficient-components-6ee2bd
 
 ## Vue/React 中使用
 
-当作原生 dom 元素直接使用即可。
+当作原生 dom 元素直接使用即可，如：
+
+```vue
+<template>
+  <div>
+    <cs-button type="primary">按钮</cs-button>
+  </div>
+</template>
+```
 
 ##  注意
 
