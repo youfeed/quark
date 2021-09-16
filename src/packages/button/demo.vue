@@ -15,11 +15,18 @@
     <cs-button plain disabled type="info">禁用状态</cs-button>
     <cs-button plain disabled type="primary">禁用状态</cs-button>
 
+
+    <h2>加载状态</h2>
+    <cs-button loading type="info"></cs-button>
+    <cs-button loading type="warning">加载中...</cs-button>
+    <cs-button :loading="isLoading" type="success" @click="changeLoading">Click me!</cs-button>
+
     <h2>按钮 + icon</h2>
     <cs-button type="primary" icon="heart">like</cs-button>
-<cs-button type="dashed" icon="search">search</cs-button>
-<cs-button type="flat" icon="left">back</cs-button>
-<cs-button icon="link">link</cs-button>
+    <cs-button type="dashed" icon="search">search</cs-button>
+    <cs-button type="flat" icon="left">back</cs-button>
+    <cs-button icon="link">link</cs-button>
+
   </div>
 </template>
 
