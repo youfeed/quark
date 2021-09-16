@@ -75,7 +75,9 @@ export default {
 }
 ```
 
-## Example
+## Examples
+
+为方便演示，直接使用 cdn 加载，工程类项目同样使用。
 
 ### Vue 工程使用
 ```html
