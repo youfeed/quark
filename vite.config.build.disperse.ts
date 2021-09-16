@@ -26,7 +26,7 @@ export default defineConfig({
   build: {
     minify: false,
     lib: {
-      entry: './src/packages/__VUE/button/index.vue',
+      entry: './src/packages/button/index.vue',
       name: 'index'
       // formats: ['umd']
     },

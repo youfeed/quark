@@ -34,11 +34,11 @@ export default defineConfig({
         }
       }
     },
-    lib: {
-      entry: 'src/packages/csui.vue.ts',
-      name: 'csui',
-      fileName: 'csui',
-      formats: ['es', 'umd']
-    }
+    // lib: {
+    //   entry: 'src/packages/csui.vue.ts',
+    //   name: 'csui',
+    //   fileName: 'csui',
+    //   formats: ['es', 'umd']
+    // }
   }
 });

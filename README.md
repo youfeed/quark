@@ -13,8 +13,10 @@ Image from [codeburst](https://codeburst.io/building-efficient-components-6ee2bd
 
 ## cdn 使用
 
-```
+```js
 <script type="module" src="https://unpkg.com/cubeshop"></script>
+// 或
+<script type="module" src="https://cdn.jsdelivr.net/npm/cubeshop"></script>
 ```
 
 ## npm 使用
