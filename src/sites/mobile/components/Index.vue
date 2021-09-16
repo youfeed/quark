@@ -1,7 +1,7 @@
 <template>
   <div class="index">
     <div class="index-header">
-      <img src="../../assets/images/logo-red.png" alt="" srcset="" />
+      <img src="../../assets/images/logo.png" alt="" srcset="" />
       <div class="info">
         <h1>Cubeshop</h1>
         <p>基于 WC 的轻量级移动端 UI 组件库</p>

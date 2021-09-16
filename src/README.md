@@ -1,3 +1,15 @@
+
+src
+├── README.md
+├── config.json // 官网菜单配置，详情见注释1
+├── docs        // Cubeshop 纯 Readme 介绍，用于「指南」菜单
+├── index.js    // 自动生成，源码入口文件
+├── packages    // 源码
+├── shims-vue.d.ts
+└── sites       // 官网
+
+## 注释1
+
 config.json 为官网菜单配置文件。
 
 ```json
