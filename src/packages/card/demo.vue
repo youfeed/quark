@@ -3,7 +3,7 @@
 
     <cs-card
       title='This is title'
-      cash='1元' 
+      cash='Tips' 
       content='This is content of `Card`'
       desc='footer content'
     ></cs-card>
