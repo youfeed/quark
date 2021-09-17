@@ -2,10 +2,10 @@
   <div class="demo">
 
     <cs-card
-      title='2021-02-08 12:00 | 单车'
+      title='This is title'
       cash='1元' 
-      content='2分50秒'
-      desc='已完成'
+      content='This is content of `Card`'
+      desc='footer content'
     ></cs-card>
 
   </div>
