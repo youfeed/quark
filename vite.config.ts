@@ -11,13 +11,13 @@ export default defineConfig({
   base: '/1x/',
   server: {
     port: 2021,
-    proxy: {
-      '/devServer': {
-        target: 'https://csui.hb.com',
-        changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/devServer/, '')
-      }
-    }
+    // proxy: {
+    //   '/devServer': {
+    //     target: 'https://csui.hb.com', // 必须真实 domain
+    //     changeOrigin: true,
+    //     rewrite: (path) => path.replace(/^\/devServer/, '')
+    //   }
+    // }
   },
   resolve: {
     alias: [{ find: '@', replacement: resolve(__dirname, './src') }]

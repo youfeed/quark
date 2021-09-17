@@ -19,7 +19,7 @@ export default class CsIcon extends HTMLElement {
 				overflow: hidden;
 			}
 			</style>
-			<svg class="icon" id="icon" aria-hidden="true" viewBox="0 0 10 10">
+			<svg class="icon" id="icon" aria-hidden="true" viewBox="0 0 1024 1024">
 				<use id="use"></use>
 			</svg>
 		`

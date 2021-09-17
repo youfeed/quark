@@ -6,16 +6,6 @@
 
 ## 代码演示
 
-```html
-<cs-card
-    title='2021-02-08 12:00 | 单车'
-    cash='1元' 
-    content='2分50秒'
-    desc='已完成'
-></cs-card>
-```
-
-
 ## API
 
 ### Props
@@ -24,7 +14,7 @@
 |--------------|----------------------------------|--------|------------------|
 | title        | 标题 | String                     |
 | content      | 内容 | String                     |
-| cash         | 金额 | String/Number                     |      0       |
-| desc         | 状态 | String                     |         |
+| cash         | 金额 | String                     |             |
+| status       | 状态 | String/Number              | - |
 
 

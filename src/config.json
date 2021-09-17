@@ -22,6 +22,16 @@
         },
         {
           "version": "0.0.1",
+          "name": "Demo",
+          "sort": 1,
+          "cName": "卡片",
+          "type": "component",
+          "show": true,
+          "desc": "卡片",
+          "author": "xsf"
+        },
+        {
+          "version": "0.0.1",
           "name": "Card",
           "sort": 1,
           "cName": "卡片",
