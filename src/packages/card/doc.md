@@ -8,10 +8,10 @@
 
 ```html
 <cs-card
-    title='2021-02-08 12:00 | 单车'
-    content='2分50秒'
-    cash='1元' 
-    desc='已完成'
+    title='This is title'
+    cash='Tips' 
+    content='This is content of `Card`'
+    desc='footer content'
 ></cs-card>
 ```
 

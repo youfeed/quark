@@ -25,11 +25,6 @@ class CsCard extends HTMLElement {
         color: #999;
         margin-bottom: 10px;
       }
-      .card-container .cash {
-        color: #333;
-        font-size: 15px;
-        text-align: right;
-      }
       .card-body{
         display: grid;
         grid-template-columns: 1fr 80px;
@@ -38,6 +33,14 @@ class CsCard extends HTMLElement {
       }
       .card-container .content {
         color: #666666;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+      .card-container .cash {
+        color: #333;
+        font-size: 15px;
+        text-align: right;
       }
       .card-container .desc {
         color: #999;
