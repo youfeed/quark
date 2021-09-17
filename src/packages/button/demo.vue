@@ -10,19 +10,31 @@
       <cs-button type="warning">警告按钮</cs-button>
     </div>
 
+    <h2>块级元素</h2>
+    <cs-button type="primary" block>块极元素</cs-button>
+    <cs-button type="info" block>块极元素</cs-button>
+    
     <h2>禁用状态</h2>
     <cs-button disabled type="primary">disabled</cs-button>
     <cs-button disabled type="info">disabled</cs-button>
-    <cs-button disabled type="primary">disabled</cs-button>
 
     <h2>加载状态</h2>
     <cs-button loading type="info"></cs-button>
     <cs-button loading type="warning">加载中...</cs-button>
 
-    <h2>按钮 + icon</h2>
+    <h2>图标按钮</h2>
     <cs-button type="primary" icon="like">喜欢</cs-button>
+    <cs-button type="info" icon="user">张三</cs-button>
 
+    <h2>自定义颜色</h2>
+    <cs-button style="color: #fff" color="#7232dd">单色按钮</cs-button>
+    <cs-button style="color: #fff" color="linear-gradient(135deg,#fa2c19 0%,#fa6419 100%);">
+      渐变色按钮
+    </cs-button>
 
+    <h2>跳转 href</h2>
+    <cs-button href="https://baidu.com" type="primary">设置href跳转</cs-button>
+    
   </div>
 </template>
 <script>

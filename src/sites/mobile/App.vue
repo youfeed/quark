@@ -114,10 +114,8 @@ export default defineComponent({
     }
     > h2 {
       margin-top: 30px;
-      margin-bottom: 10px;
       font-size: 14px;
       color: rgba(144, 156, 164, 1);
-      padding: 0 10px;
       font-weight: normal;
     }
     > p {

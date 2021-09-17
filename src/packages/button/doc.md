@@ -18,17 +18,26 @@
 <cs-button type="warning">警告按钮</cs-button>
 ```
 
+### 块级 block
+
+通过 `block` 属性来设置块级样式。
+
+```html
+<cs-button type="primary" block>块极元素</cs-button>
+<cs-button type="info" block>块极元素</cs-button>
+```
 ### 禁用状态
 
 通过 `disabled` 属性来禁用按钮，禁用状态下按钮不可点击。
 
 ```html
-<cs-button disabled type="primary">禁用状态</cs-button>
-<cs-button plain disabled type="info">禁用状态</cs-button>
-<cs-button plain disabled type="primary">禁用状态</cs-button>
+<cs-button disabled type="primary">disabled</cs-button>
+<cs-button disabled type="info">disabled</cs-button>
 ```
 
 ### 加载状态
+
+通过 `loading` 属性设置加载状态。
 
 ```html
 <cs-button loading type="info"></cs-button>
@@ -37,38 +46,33 @@
 
 ### 图标按钮
 
-```html
-  <cs-button shape="square" plain type="primary" icon="star-fill"></cs-button>
-  <cs-button shape="square" type="primary" icon="star">收藏</cs-button>
-```
-
-### 按钮尺寸
-
-支持 `large`、`normal`、`small` 三种尺寸，默认为 `normal`。
+通过 `icon` 属性设置图标。
 
 ```html
-<cs-button size="large" type="primary">大号按钮</cs-button>
-<cs-button type="primary">普通按钮</cs-button>
-<cs-button size="small" type="primary">小型按钮</cs-button>
-```
-
-### 块级元素
-
-按钮在默认情况下为行内块级元素，通过 `block` 属性可以将按钮的元素类型设置为块级元素，常用来实现通栏按钮。
-
-```html
-<cs-button block type="primary">块级元素</cs-button>
+<cs-button type="primary" icon="like">喜欢</cs-button>
+<cs-button type="info" icon="user">张三</cs-button>
 ```
 
 ### 自定义颜色
-通过 color 属性可以自定义按钮的颜色。
+
+通过 `color` 属性可以自定义按钮的颜色。
+
 ```html
-<cs-button color="#7232dd">单色按钮</cs-button>
-<cs-button color="#7232dd" plain>单色按钮</cs-button>
-<cs-button color="linear-gradient(to right, #ff6034, #ee0a24)">
+<cs-button style="color: #fff" color="#7232dd">单色按钮</cs-button>
+<cs-button style="color: #fff" color="linear-gradient(135deg,#fa2c19 0%,#fa6419 100%);">
   渐变色按钮
 </cs-button>
 ```
+
+### 跳转 href
+
+通过 `href` 属性来设置需要跳转的链接，当作 `a` 标签使用。
+
+```html
+<cs-button href="https://baidu.com" type="primary">设置href跳转</cs-button>
+```
+
+
 ## API
 
 ### Props
@@ -76,18 +80,9 @@
 | 参数         | 说明                             | 类型   | 默认值           |
 |--------------|----------------------------------|--------|------------------|
 | type         | 类型，可选值为 `primary` `info` `warning` `danger` `success` | String |`default`         |
-| size        | 尺寸，可选值为 `large` `small`  | String | `normal`      |
-| shape         | 形状，可选值为 `square` | String | `round`             |
-| color | 按钮颜色，支持传入 linear-gradient 渐变色     | String | - |
-| plain          | 	是否为朴素按钮                       | Boolean | `false`             |
+| color | 按钮颜色，支持传入 `linear-gradient` 渐变色     | String | - |
 | disabled          | 	是否禁用按钮                       | Boolean | `false`              |
 | block          | 是否为块级元素                        | Boolean | `false`               |
 | icon          | 按钮图标，同Icon组件name属性                        | String | -     |
 | loading          | 按钮loading状态                        | Boolean | `false`               |
-
-### Events
-
-| 事件名 | 说明           | 回调参数     |
-|--------|----------------|--------------|
-| click  | 点击按钮时触发 | event: MouseEvent |
-
+| href          | 设置跳转链接                        | String | - |
