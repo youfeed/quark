@@ -1,6 +1,6 @@
 <template>
   <div class="demo">
-    
+
     <h2>按钮类型</h2>
     <div class="demo-buttons">
       <cs-button type="primary">主要按钮</cs-button>
