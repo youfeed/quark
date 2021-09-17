@@ -15,6 +15,7 @@ class CsCard extends HTMLElement {
         border-radius: 4px;
         overflow: hidden;
         padding: 20px;
+        box-sizing: border-box;
       }
       .card-container {
         width: 100%;

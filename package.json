@@ -1,6 +1,6 @@
 {
   "name": "cubeshop",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Mobile UI Components built on Web Components.",
   "main": "src/index.js",
   "module": "src/index.js",
