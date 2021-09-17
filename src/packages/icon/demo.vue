@@ -21,7 +21,6 @@
       <cs-icon size="26" name="location" color="#F44336"></cs-icon>
       <cs-icon size="26" name="user" color="#3F51B5"></cs-icon>
     </section>
-
   </div>
 </template>
 <style>

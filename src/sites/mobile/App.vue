@@ -95,7 +95,8 @@ export default defineComponent({
     background: #f5f5f9;
     overflow-x: hidden;
     overflow-y: auto;
-    padding: 57px 17px 0 17px;
+    padding: 70px 18px 18px;
+    min-height: 668px;
 
     &.full {
       padding: 57px 0 0 0;
@@ -113,10 +114,10 @@ export default defineComponent({
       background: transparent;
     }
     > h2 {
-      margin-top: 30px;
       font-size: 14px;
       color: rgba(144, 156, 164, 1);
       font-weight: normal;
+      margin-bottom: 10px;
     }
     > p {
       font-size: 12px;

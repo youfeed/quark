@@ -100,14 +100,10 @@ export default class CsButton extends HTMLElement {
             cursor:pointer;
         }
         </style>
-        <${this.href?'a':'button'} ${(this.download&&this.href)?'download="'+this.download+'"':''} ${this.href?'href="'+this.href+'" target="'+this.target+'" rel="'+this.rel+'"':''} class="btn" id="btn"></${this.href?'a':'button'}>${!this.loading && this.icon && this.icon!='null'?'<cs-icon id="icon" name='+this.icon+'></cs-icon>':''}<slot></slot>
+        <${this.href?'a':'button'} ${this.href?'href="'+this.href+'" target="'+this.target+'" rel="'+this.rel+'"':''} class="btn" id="btn"></${this.href?'a':'button'}>${!this.loading && this.icon && this.icon!='null'?'<cs-icon id="icon" name='+this.icon+'></cs-icon>':''}<slot></slot>
         `
     }
-
-    focus() {
-        this.btn.focus();
-    }
-
+    
     get disabled() {
         return this.getAttribute('disabled')!==null;
     }
@@ -130,10 +126,6 @@ export default class CsButton extends HTMLElement {
 
     get rel() {
         return this.getAttribute('rel');
-    }
-
-    get download() {
-        return this.getAttribute('download');
     }
 
     get icon() {

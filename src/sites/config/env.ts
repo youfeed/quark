@@ -27,7 +27,7 @@ switch (import.meta.env.MODE) {
      * 线上环境 => npm run build
      */
     config.isPrd = true;
-    config.baseUrl = 'https://csui.jd.com';
+    config.baseUrl = 'https://csui.hb.com';
     break;
 }
 export default config;

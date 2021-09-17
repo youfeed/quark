@@ -1,47 +1,32 @@
 <template>
   <div class="demo">
     <h2>基础用法</h2>
-    
+    <div class="demo-loadings">
+      <cs-loading></cs-loading>
+    </div>
+
+    <h2>loading 颜色</h2>
+    <div class="demo-loadings">
+      <cs-loading size="30"></cs-loading>
+      <cs-loading size="30" color="green"></cs-loading>
+      <cs-loading size="30" color="orange"></cs-loading>
+    </div>
+
+    <h2>尺寸大小</h2>
+    <div class="demo-loadings">
+      <cs-loading size="20"></cs-loading>
+      <cs-loading size="30"></cs-loading>
+      <cs-loading size="40"></cs-loading>
+    </div>
+
   </div>
 </template>
 
-<script lang="ts">
-import icons from '@/packages/styles/font/config.json';
-import { createComponent } from '../../utils/create';
-const { createDemo } = createComponent('icon');
-export default createDemo({
-  props: {},
-  setup() {
-    return { icons };
+<style scoped>
+  cs-loading {
+    margin-right: 6px;
   }
-});
-</script>
-
-<style lang="scss" scoped>
-.cs-cell {
-  > .csui-iconfont {
-    margin-right: 10px;
+  .demo-loadings{
+    margin-bottom: 24px;
   }
-}
-ul {
-  display: flex;
-  flex-wrap: wrap;
-  li {
-    flex: 0 0 25%;
-    max-width: 25%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    span {
-      height: 40px;
-      font-size: 12px;
-      text-align: center;
-    }
-    .csui-iconfont {
-      margin: 16px 0 16px;
-    }
-  }
-}
 </style>

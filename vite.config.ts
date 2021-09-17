@@ -13,7 +13,7 @@ export default defineConfig({
     port: 2021,
     proxy: {
       '/devServer': {
-        target: 'https://csui.jd.com',
+        target: 'https://csui.hb.com',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/devServer/, '')
       }
