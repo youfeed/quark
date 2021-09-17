@@ -11,7 +11,7 @@ Image from [codeburst](https://codeburst.io/building-efficient-components-6ee2bd
 - Web Components.
 - Simple.
 
-## cdn 使用
+## CDN 使用
 
 ```js
 <script type="module" src="https://unpkg.com/cubeshop"></script>
@@ -19,20 +19,35 @@ Image from [codeburst](https://codeburst.io/building-efficient-components-6ee2bd
 <script type="module" src="https://cdn.jsdelivr.net/npm/cubeshop"></script>
 ```
 
-## npm 使用
+## NPM 使用
 
 敬请期待......
 
 ## Vue/React 中使用
 
-当作原生 dom 元素直接使用即可，如：
+当作原生 dom 元素直接使用即可。
 
-```vue
+#### Vue 工程
+
+```jsx
 <template>
   <div>
     <cs-button type="primary">按钮</cs-button>
   </div>
 </template>
+```
+#### React 工程
+
+```jsx
+class Demo extends React.Component {
+  render() {
+    return (
+      <div>
+        <cs-button type="primary">按钮</cs-button>
+      </div>
+    );
+  }
+}
 ```
 
 ##  注意
