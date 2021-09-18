@@ -5,7 +5,7 @@
 
 > 扫描下方二维码体验，体验 Cubeshop 组件库示例
 
-<!-- <img src="../assets/images/qr.png" width="200" alt="qr.png"> -->
+<img src="https://allan2coder.github.io/cubeshop/0.0.17/qr.cb9dd16b.png" width="200" alt="qr.png">
 
 
 ## CDN 使用
