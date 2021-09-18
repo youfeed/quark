@@ -13,7 +13,6 @@
   ],
   "scripts": {
     "build:site": "npm run checked && vite build && npm run copy",
-    "build:gh-pages": "npm run checked && vite build --base=/csui/ && npm run copy",
     "copy": "node cs/copy.js",
     "checked": "npm run generate:file && tsc",
     "dev": "npm run checked && vite --open --force",
