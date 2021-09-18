@@ -5,7 +5,7 @@
 
       <div class="content-left">
         <div class="content-title"> Cubeshop </div>
-        <div class="content-subTitle">面向未来的原生 web components UI组件库（UI library based on web components）。</div>
+        <div class="content-subTitle">面向未来的原生 Web Components UI组件库（UI library based on Web Components）。</div>
         
         <div class="content-button">
           <div class="leftButton" @click="toIntro">
