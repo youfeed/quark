@@ -1,3 +1,4 @@
+// 官网线上打包 / 本地开发使用
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import legacy from '@vitejs/plugin-legacy';

@@ -12,10 +12,10 @@
     "package.json"
   ],
   "scripts": {
+    "dev": "npm run checked && vite --open --force",
     "build:site": "npm run checked && vite build && npm run copy",
     "copy": "node cs/copy.js",
     "checked": "npm run generate:file && tsc",
-    "dev": "npm run checked && vite --open --force",
     "build": "npm run checked && vite build --config vite.config.build.ts && npm run generate:types",
     "serve": "vite preview",
     "add": "node cs/createComponentMode.js",

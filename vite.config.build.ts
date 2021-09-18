@@ -1,3 +1,4 @@
+// UI 源码打包专用
 import { defineConfig } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import path from 'path';
