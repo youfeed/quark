@@ -6,7 +6,7 @@
       <div class="content-left">
         <div class="content-title"> Cubeshop </div>
         <div class="content-subTitle">面向未来的原生 Web Components UI组件库（UI library based on Web Components）。</div>
-        
+        <!-- <p>Cubeshop 是一个基于 Web Components 的跨框架 UI 组件库，输出标准的 Custom Element，组件可以同时在 React、Vue、Preact、Angular 或 原生 JS 等任意框架或无框架中使用。</p> -->
         <div class="content-button">
           <div class="leftButton" @click="toIntro">
             <div class="leftButtonText">开始使用</div>
