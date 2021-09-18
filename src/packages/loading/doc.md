@@ -12,15 +12,6 @@
 <cs-loading></cs-loading>
 ```
 
-### loading 颜色
-
-通过 `color` 属性用来设置 `loading` 的颜色。
-
-```html
-<cs-loading size="30"></cs-loading> // 默认颜色
-<cs-loading size="30" color="green"></cs-loading>
-<cs-loading size="30" color="orange"></cs-loading>
-```
 
 ### 尺寸大小
 
@@ -31,6 +22,17 @@
 <cs-loading size="30"></cs-loading>
 <cs-loading size="40"></cs-loading>
 ```
+
+### loading 颜色
+
+通过 `color` 属性用来设置 `loading` 的颜色。
+
+```html
+<cs-loading size="30"></cs-loading> // 默认颜色
+<cs-loading size="30" color="green"></cs-loading>
+<cs-loading size="30" color="orange"></cs-loading>
+```
+
 
 ## API
 

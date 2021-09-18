@@ -57,14 +57,5 @@ const router = createRouter({
     }
   }
 });
-router.afterEach((to, from) => {
-  window.scrollTo(0, 0);
-  try {
-    setTimeout(() => {
-      new Image().src = `${config.baseUrl}/openapi/point?p=${encodeURIComponent(
-        JSON.stringify(location)
-      )}`;
-    }, 500);
-  } catch (error) {}
-});
+
 export default router;

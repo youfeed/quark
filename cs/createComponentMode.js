@@ -25,7 +25,7 @@ function init() {
       {
         type: 'input',
         name: 'name',
-        message: '组件英文名(每个单词的首字母都大写，如TextBox)：',
+        message: '组件英文名(每个单词的首字母都大写，如 Button)：',
         validate(value) {
           let repeat = false;
           for (var i = 0; i < nav.length; i++) {
@@ -43,7 +43,7 @@ function init() {
           if (pass) {
             return true;
           }
-          return '不能为空，且每个单词的首字母都要大写，如TextBox';
+          return '不能为空，且每个单词的首字母都要大写，如 Button';
         }
       },
       {
@@ -89,18 +89,6 @@ function init() {
           return '输入有误！请输入选项前编号';
         }
       },
-      //   {
-      //     type: 'confirm',
-      //     name: 'showDemo',
-      //     message: '是否需要DEMO页面?',
-      //     default: true
-      //   },
-      //   {
-      //     type: 'confirm',
-      //     name: 'showTest',
-      //     message: '是否需要单元测试页面?',
-      //     default: true
-      //   },
       {
         type: 'input',
         name: 'author',
@@ -108,65 +96,21 @@ function init() {
       }
     ])
     .then(function (answers) {
-      // answers.sort = String(sorts.indexOf(answers.sort));
       newCpt = Object.assign(newCpt, answers);
       createNew();
     });
 }
+
 function createIndexJs() {
   const nameLc = newCpt.name.toLowerCase();
   const destPath = path.join('src/packages/' + nameLc);
   if (!fs.existsSync(destPath)) {
     fs.mkdirSync(destPath);
   }
-  // copy(path.join(__dirname, './__template__/**.*'), destPath, function (err: any, file: any) {
-  // 	if (err) {
-  // 		console.log('拷贝__template__目录失败！');
-  // 	}
-  // 	createNew();
-  // });
 
   if (newCpt.type == 'method') return;
   return new Promise((resolve, reject) => {
-    //         let content = `import ${newCpt.name} from './src/${nameLc}.vue';
-    // ${newCpt.name}.install = function(Vue) {
-    //   Vue.${newCpt.type}(${newCpt.name}.name, ${newCpt.name});
-    // };
-    // export default ${newCpt.name}`;
-    //         let content2 = `${newCpt.name}.install = function(Vue) {
-    // Vue.${newCpt.type}(${newCpt.name}.name, ${newCpt.name});
-    // };
-    // export default ${newCpt.name}`;
-
-    // const dirPath = path.join(__dirname, `../src/packages/${nameLc}/`);
-
-    // const filePath = path.join(dirPath, `index.js`);
-    // if (!fs.existsSync(dirPath)) {
-    // 	fs.mkdirSync(filePath);
-    // }
-    // if (newCpt.type == 'filter' || newCpt.type == 'directive'){
-    //     content = content2;
-    // }
-    // fs.writeFile(filePath,  content, (err) => {
-    //     if (err) throw err;
     resolve(`生成index.js文件成功`);
-    // });
-  });
-}
-
-function createVue() {
-  return new Promise((resolve, reject) => {
-    const nameLc = newCpt.name.toLowerCase();
-    let content = demoModel(nameLc).vue;
-    const dirPath = path.join(__dirname, `../src/packages/${nameLc}/`);
-    const filePath = path.join(dirPath, `index.vue`);
-    if (!fs.existsSync(dirPath)) {
-      fs.mkdirSync(filePath);
-    }
-    fs.writeFile(filePath, content, (err) => {
-      if (err) throw err;
-      resolve(`生成${newCpt.name}.vue文件成功`);
-    });
   });
 }
 
@@ -192,7 +136,6 @@ function addToPackageJson() {
     newCpt.sort = nav[sort - 1].packages.length + 1;
     nav[sort - 1].packages.push(newCpt);
     config.nav = nav;
-    // conf.packages.push(newCpt);
     const dirPath = path.join(__dirname, `../`);
     const filePath = path.join(dirPath, `src/config.json`);
 
@@ -203,21 +146,7 @@ function addToPackageJson() {
     });
   });
 }
-function createScss() {
-  return new Promise((resolve, reject) => {
-    const nameLc = newCpt.name.toLowerCase();
-    let content = `.cs-${nameLc} {}`;
-    const dirPath = path.join(__dirname, '../src/packages/' + nameLc);
-    const filePath = path.join(dirPath, `index.scss`);
-    if (!fs.existsSync(dirPath)) {
-      fs.mkdirSync(filePath);
-    }
-    fs.writeFile(filePath, content, (err) => {
-      if (err) throw err;
-      resolve(`index.scss文件成功`);
-    });
-  });
-}
+
 function createDoc() {
   return new Promise((resolve, reject) => {
     const nameLc = newCpt.name.toLowerCase();
@@ -233,24 +162,39 @@ function createDoc() {
     });
   });
 }
+
+function createMjs() {
+  return new Promise((resolve, reject) => {
+    const nameLc = newCpt.name.toLowerCase();
+    let content = demoModel(nameLc).mjs;
+    const dirPath = path.join(__dirname, `../src/packages/${nameLc}/`);
+    const filePath = path.join(dirPath, `cs-${nameLc}.mjs`);
+    if (!fs.existsSync(dirPath)) {
+      fs.mkdirSync(filePath);
+    }
+    fs.writeFile(filePath, content, (err) => {
+      if (err) throw err;
+      resolve(`生成cs-${newCpt.name}.mjs文件成功`);
+    });
+  });
+}
+
+
 function createNew() {
   createIndexJs()
-    .then(() => {
-      if (newCpt.type == 'component' || newCpt.type == 'method') {
-        return createVue();
-      } else {
-        return;
-      }
-    })
-    .then(() => {
-      return createScss();
-    })
-    .then(() => {
-      return createDemo();
-    })
-    .then(() => {
-      return createDoc();
-    })
+    // .then(() => {
+    //   if (newCpt.type == 'component') {
+    //     return createMjs();
+    //   } else {
+    //     return;
+    //   }
+    // })
+    // .then(() => {
+    //   return createDemo();
+    // })
+    // .then(() => {
+    //   return createDoc();
+    // })
     .then(() => {
       return addToPackageJson();
     })

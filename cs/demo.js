@@ -4,10 +4,10 @@ var demoModel = function (nameLc) {
     demo: `<template>
     <div class="demo">
       <h2>基础用法</h2>
-      <cs-cell>
+      <nut-cell>
         <${nameLc} ></${nameLc}>
         <${nameLc} ></${nameLc}>
-      </cs-cell>
+      </nut-cell>
     </div>
   </template>
   
@@ -27,48 +27,37 @@ var demoModel = function (nameLc) {
   }
   </style>
   `,
-    vue: `<template>
-    <view :class="classes" @click="handleClick">
-      <view>{{ name }}</view>
-      <view>{{ txt }}</view>
-    </view>
-  </template>
-  <script lang="ts">
-  import { toRefs } from 'vue';
-  import { createComponent } from '../../utils/create';
-  const { componentName, create } = createComponent('${nameLc}');
-  
-  export default create({
-    props: {
-      name: {
-        type: String,
-        default: ''
-      },
-      txt: {
-        type: String,
-        default: ''
-      }
-    },
-    components: {},
-    emits: ['click'],
-  
-    setup(props, { emit }) {
-      console.log('componentName', componentName);
-  
-      const { name, txt } = toRefs(props);
-  
-      const handleClick = (event: Event) => {
-        emit('click', event);
-      };
-  
-      return { name, txt, handleClick };
+    mjs: `class CsXx extends HTMLElement {
+static get observedAttributes() { return ['title'] }
+
+constructor() {
+  super();
+  const shadowRoot = this.attachShadow({ mode: 'open' });
+  shadowRoot.innerHTML = '';
+}
+
+get title() {
+  return this.getAttribute('title');
+}
+
+set title(value) {
+  return this.setAttribute('title', value);
+}
+
+attributeChangedCallback(name, oldValue, newValue) {
+  if(name === 'title') {
+    if(newValue !== null) {
+      this.shadowRoot.getElementById('title').innerText = newValue;
     }
-  });
-  </script>
-  
-  <style lang="scss">
-  @import 'index.scss';
-  </style>
+  }
+}
+
+connectedCallback() {}
+}
+
+if (!customElements.get('cs-xx')) {
+customElements.define('cs-xx', CsXx);
+}    
   `,
     doc: `#  ${nameLc}组件
 
@@ -95,7 +84,7 @@ var demoModel = function (nameLc) {
     | name         | 图标名称或图片链接               | String | -                |
     | color        | 图标颜色                         | String | -                |
     | size         | 图标大小，如 '20px' '2em' '2rem' | String | -                |
-    | class-prefix | 类名前缀，用于使用自定义图标     | String | 'csui-iconfont' |
+    | class-prefix | 类名前缀，用于使用自定义图标     | String | 'nutui-iconfont' |
     | tag          | HTML 标签                        | String | 'i'              |
     
     ### Events

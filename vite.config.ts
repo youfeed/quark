@@ -8,7 +8,7 @@ const hljs = require('highlight.js'); // https://highlightjs.org/
 const resolve = path.resolve;
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/1x/',
+  base: '/',
   server: {
     port: 2021,
     // proxy: {
@@ -61,7 +61,7 @@ export default defineConfig({
   ],
   build: {
     target: 'es2015',
-    outDir: './dist/3x/',
+    outDir: './dist/',
     assetsDir: config.version,
     cssCodeSplit: true,
     rollupOptions: {

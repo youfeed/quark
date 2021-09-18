@@ -16,6 +16,7 @@ export default defineConfig({
   css: {
     preprocessorOptions: {
       scss: {
+        // example : additionalData: `@import "./src/design/styles/variables";`
         // dont need include file extend .scss
         additionalData: `@import "@/packages/styles/variables.scss";@import "@/sites/assets/styles/variables.scss";`
       }
@@ -34,11 +35,11 @@ export default defineConfig({
         }
       }
     },
-    // lib: {
-    //   entry: 'src/packages/csui.vue.ts',
-    //   name: 'csui',
-    //   fileName: 'csui',
-    //   formats: ['es', 'umd']
-    // }
+    lib: {
+      entry: 'src/packages/index.vue.ts',
+      name: 'csui',
+      fileName: 'csui',
+      formats: ['es', 'umd']
+    }
   }
 });

@@ -331,14 +331,15 @@ export default defineComponent({
     padding: 15% 0 0 8.8%;
     flex: 1;
     min-width: 550px;
+    background: #000;
     .content-title {
       font-size: 42px;
-      color: #333;
+      color: #fff;
     }
     .content-subTitle {
       margin-top: 12px;
       font-size: 20px;
-      color: #333;
+      color: #fff;
     }
     .content-button {
       position: relative;

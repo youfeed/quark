@@ -1,57 +1,25 @@
+// const package = require('../package.json');
 const config = require('../src/config.json');
 const path = require('path');
 const fs = require('fs-extra');
-
-let importStr = `import { App } from 'vue';
-declare class UIComponent {
-  static install(vue: App): void;
-}\n`;
-
-const packages = [];
+let importStr = '';
 
 config.nav.map((item) => {
   item.packages.forEach((element) => {
-    let { name, show, exportEmpty } = element;
+    let { name, show, type, exportEmpty } = element;
     if (show || exportEmpty) {
-      importStr += `declare class ${name} extends UIComponent {}\n`;
-      packages.push(name);
+      importStr += `import './packages/${name.toLowerCase()}/cs-${name.toLocaleLowerCase()}.mjs';\n`;
     }
   });
 });
 
-let installFunction = `
-export interface InstallationOptions {
-  locale?: any;
-  lang?: any;
-}
-declare function install(app: App, options?: InstallationOptions): void;
-export { ${packages.join(',')},install };
-declare const _default: {
-  install: typeof install;
-  version: string;
-};
-export default _default;`;
-
-let fileStr = importStr + installFunction;
-
-console.log(fileStr, 888);
+let fileStr = `${importStr}`;
 
 fs.outputFile(
-  path.resolve(__dirname, '../dist/csui.d.ts'),
+  path.resolve(__dirname, '../dist/index.js'),
   fileStr,
   'utf8',
   (error) => {
     // logger.success();
   }
 );
-
-// fs.outputFile(
-//   path.resolve(__dirname, '../dist/index.d.ts'),
-//   `import * as Csui from './csui';
-// export default Csui;
-// export * from './csui';`,
-//   'utf8',
-//   (error) => {
-//     // logger.success();
-//   }
-// );
