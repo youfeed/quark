@@ -11,6 +11,10 @@ Image from [codeburst](https://codeburst.io/building-efficient-components-6ee2bd
 - Web Components.
 - Simple.
 
+## 安装使用
+
+具体安装使用方法请参考 Cubeshop 官网 https://allan2coder.github.io/cubeshop
+
 ## CDN 使用
 
 ```js
