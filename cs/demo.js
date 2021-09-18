@@ -4,28 +4,11 @@ var demoModel = function (nameLc) {
     demo: `<template>
     <div class="demo">
       <h2>基础用法</h2>
-      <nut-cell>
-        <${nameLc} ></${nameLc}>
-        <${nameLc} ></${nameLc}>
-      </nut-cell>
+      <div>
+        <cs-loading></cs-loaing>
+      <div>
     </div>
   </template>
-  
-  <script lang="ts">
-  import { createComponent } from '../../utils/create';
-  const { createDemo } = createComponent('${nameLc}');
-  export default createDemo({
-    props: {},
-    setup() {
-      return {};
-    }
-  });
-  </script>
-  
-  <style lang="scss" scoped>
-  .demo{
-  }
-  </style>
   `,
     mjs: `class CsXx extends HTMLElement {
 static get observedAttributes() { return ['title'] }
