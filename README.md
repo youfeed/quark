@@ -2,16 +2,17 @@
 
 Cubeshop 是一个基于 Web Components 的 UI 组件库。
 
-它是一个不局限于框架的组件复用（可在 Angular、React、Vue 等跨技术栈使用）。
+无论您的项目是 Vue、React，还是 Angular，您都可以直接使用。
 
 ![image](https://miro.medium.com/max/2000/1*-zkpV1IfOv-1dux6ZqWBCQ.png)
 Image from [codeburst](https://codeburst.io/building-efficient-components-6ee2bdaea542) by [@webrealizer](https://twitter.com/webrealizer)
 
 ## Features
 
-- Fast.
-- Web Components.
-- Simple.
+- 支持Vue、React、Angular，技术栈无关
+- 基于 Web Components.
+- 简单、速度快
+
 
 ## 安装使用
 
