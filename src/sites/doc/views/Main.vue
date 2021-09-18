@@ -16,7 +16,7 @@
 
             <div class="qrcodepart">
               <div class="qrcode-text"> 请使用手机扫码体验 </div>
-              <div class="qrcode">TODO</div>
+              <div class="qrcode"></div>
             </div>
           </div>
 
@@ -409,7 +409,7 @@ export default defineComponent({
           width: 160px;
           height: 160px;
           margin: 0 auto;
-          background: url('')
+          background: url('../../assets/images/qr.png')
             no-repeat;
           background-size: cover;
         }

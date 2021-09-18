@@ -3,11 +3,9 @@
 ## 预览
 
 
-> 敬请期待......
+> 扫描下方二维码体验，体验 Cubeshop 组件库示例
 
-<!-- > 扫描下方二维码体验，体验： -->
-
-<!-- <img src="xx" width="200" alt="cubeshop"> -->
+<!-- <img src="../assets/images/qr.png" width="200" alt="qr.png"> -->
 
 
 ## CDN 使用

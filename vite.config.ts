@@ -8,7 +8,7 @@ const hljs = require('highlight.js'); // https://highlightjs.org/
 const resolve = path.resolve;
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/',
+  base: '/cubeshop/',
   server: {
     port: 2021,
     // proxy: {
