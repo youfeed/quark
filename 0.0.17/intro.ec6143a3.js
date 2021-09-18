@@ -1,0 +1,1 @@
+import{e,o,g as s}from"./vendor.61e79af0.js";const a={class:"markdown-body"},n=[s("h1",null,"Cubeshop",-1),s("h4",null,"Cubeshop 是一个基于 Web Components 的 UI 组件库。",-1),s("h4",null,"无论你的项目是 Vue、React，还是 Angular，您都可以直接使用。",-1)],t={setup:(s,{expose:t})=>(t({frontmatter:{}}),(s,t)=>(o(),e("div",a,n)))};export{t as default};
