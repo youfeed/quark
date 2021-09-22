@@ -1,1 +1,0 @@
-import{o as a,e,g as o}from"./vendor.f8cf0831.js";const s={},m={class:"demo"},n=[o("cs-demo",{image:"https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg",name:"Ray",email:"Ray@hb.com"},null,-1)];s.render=function(o,s){return a(),e("div",m,n)};export{s as default};
