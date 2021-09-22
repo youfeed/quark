@@ -66,7 +66,16 @@
       "name": "导航组件",
       "enName": "action",
       "packages":[
-             
+        {
+          "version": "0.0.1",
+          "name": "Tab",
+          "sort": 1,
+          "cName": "标签组件",
+          "type": "component",
+          "show": true,
+          "desc": "标签组件",
+          "author": "xsf"
+        }  
       ]
     },
     {
@@ -92,17 +101,7 @@
           "show": true,
           "desc": "输入框",
           "author": "xsf"
-        },
-        {
-          "version": "0.0.1",
-          "name": "Tab",
-          "sort": 1,
-          "cName": "标签组件",
-          "type": "component",
-          "show": true,
-          "desc": "标签组件",
-          "author": "xsf"
-        }        
+        }      
       ]
     }
   ],
