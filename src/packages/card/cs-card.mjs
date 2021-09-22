@@ -49,12 +49,12 @@ class CsCard extends HTMLElement {
     </style>
   
     <div class="card-container" id="card">
-      <div class="title" id="title">${this.title || ''}</div>
+      <div class="title" id="title"></div>
       <div class="card-body">
-        <div class="content" id="content">${this.content || ''}</div>
-        <div class="cash" id="cash">${this.cash || ''}</div>
+        <div class="content" id="content"></div>
+        <div class="cash" id="cash"></div>
       </div>
-      <div class="desc" id="desc">${this.desc || ''}</div>
+      <div class="desc" id="desc"></div>
     </div>
     `
   }
@@ -111,7 +111,7 @@ class CsCard extends HTMLElement {
 
   // 首次挂载 dom
   connectedCallback() {
-    console.log(this.desc, 877);;
+  
   }
 }
 

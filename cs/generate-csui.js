@@ -13,8 +13,10 @@ config.nav.map((item) => {
   });
 });
 
-
-let fileStr = `${importStr}`;
+let fileStr = `${importStr}
+import CsDialog from './packages/dialog/cs-dialog.mjs';
+window.CsDialog = CsDialog;
+`;
 
 fs.outputFile(
   path.resolve(__dirname, '../src/index.js'),

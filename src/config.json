@@ -65,7 +65,18 @@
     {
       "name": "操作反馈",
       "enName": "action",
-      "packages":[]
+      "packages":[
+        {
+          "version": "0.0.1",
+          "name": "Dialog",
+          "sort": 1,
+          "cName": "模态框",
+          "type": "component",
+          "show": true,
+          "desc": "按钮",
+          "author": "xsf"
+        }
+      ]
     }
   ],
   "header": [],
