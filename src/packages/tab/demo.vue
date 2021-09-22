@@ -3,15 +3,15 @@
 
     <h2>基础用法</h2>
     <div class="demo-item">
-      <cs-tab activekey="aaa" onchange="console.log(event)">
+      <cs-tab activekey="akey" onchange="console.log(event)">
         <cs-tab-content label="tab1">
-          《孙子兵法三十六计》是2008年万卷出版公司出版的一本图书，作者是（春秋）孙武。
+          Twenty-Five Hundred years ago, Sun Tzu wrote this classic book of military strategy based on Chinese warfare and military thought.
         </cs-tab-content>
-        <cs-tab-content label="tab2" key="aaa">
-          《孙子兵法三十六计》是2008年万卷出版公司出版的一本图书，作者是（春秋）孙武。
+        <cs-tab-content label="tab2" key="akey">
+          Sun Tzu said: The art of war is of vital importance to the State.
         </cs-tab-content>
         <cs-tab-content label="tab3" disabled>
-          《孙子兵法三十六计》是2008年万卷出版公司出版的一本图书，作者是（春秋）孙武。
+          It is a matter of life and death, a road either to safety or to ruin.
         </cs-tab-content>
       </cs-tab>
     </div>
