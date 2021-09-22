@@ -18,9 +18,9 @@
       <cs-button @click="showDialog5()">无按钮</cs-button>
     </div> -->
 
-    <!-- <cs-dialog id="dialog2" title="标签式调用" oktext="确定" canceltext="取消">
+    <cs-dialog id="dialog2" title="标签式调用" oktext="确定" canceltext="取消">
       组件调用
-    </cs-dialog> -->
+    </cs-dialog>
   </div>
 </template>
 
