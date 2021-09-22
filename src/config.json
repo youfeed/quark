@@ -63,6 +63,13 @@
       ]
     },
     {
+      "name": "导航组件",
+      "enName": "action",
+      "packages":[
+             
+      ]
+    },
+    {
       "name": "操作反馈",
       "enName": "action",
       "packages":[
@@ -73,9 +80,29 @@
           "cName": "模态框",
           "type": "component",
           "show": true,
-          "desc": "按钮",
+          "desc": "模态框",
           "author": "xsf"
-        }
+        },
+        {
+          "version": "0.0.1",
+          "name": "Input",
+          "sort": 1,
+          "cName": "输入框",
+          "type": "component",
+          "show": true,
+          "desc": "输入框",
+          "author": "xsf"
+        },
+        {
+          "version": "0.0.1",
+          "name": "Tab",
+          "sort": 1,
+          "cName": "标签组件",
+          "type": "component",
+          "show": true,
+          "desc": "标签组件",
+          "author": "xsf"
+        }        
       ]
     }
   ],

@@ -94,14 +94,14 @@ class CsDialog extends HTMLElement {
         </style>
         <div class="dialog">
             <div class="dialog-content">
-                <div class="dialog-title" id="title">${this.title}</div>
+                <div class="dialog-title" id="title"></div>
                 <cs-button class="btn-close" id="btn-close" icon="close"></cs-button>
                 <div class="dialog-body">
                     <slot></slot>
                 </div>
-                <div class="dialog-footer">
-                    <cs-button id="btn-cancel">${this.canceltext}</cs-button>
-                    <cs-button id="btn-submit" type="primary">${this.oktext}</cs-button>
+                <div class="dialog-footer" id="dialog-footer">
+                    <cs-button id="btn-cancel"></cs-button>
+                    <cs-button id="btn-submit" type="primary"></cs-button>
                 </div>
             </div>
         </div>
@@ -125,6 +125,7 @@ class CsDialog extends HTMLElement {
     }
 
     get canceltext() {
+        console.log(this.getAttribute('canceltext'), 8877);
         return this.getAttribute('canceltext');
     }
 
@@ -145,6 +146,7 @@ class CsDialog extends HTMLElement {
     }
 
     set canceltext(value) {
+        console.log(value, 88);
         this.setAttribute('canceltext', value);
     }
 
@@ -165,7 +167,9 @@ class CsDialog extends HTMLElement {
         }
     }
 
+    // custom element 增加、删除或者修改某个属性时被调用
     attributeChangedCallback (name, oldValue, newValue) {
+        console.log(name, 22);
         if( name == 'open' && this.shadowRoot){
             if(newValue !== null){
                 this.btnActive = document.activeElement;
@@ -179,13 +183,11 @@ class CsDialog extends HTMLElement {
         if( name == 'oktext'){
             if(newValue !== null){
                 this.shadowRoot.getElementById('btn-submit').innerText = newValue;
+                // this.btnSubmit.textContent = newValue;
             }
         }
-        // if( name == 'canceltext' && this.btnCancel){
         if( name == 'canceltext'){
-            console.log(newValue, 1);
             if(newValue !== null){
-                console.log(newValue, 88);
                 this.shadowRoot.getElementById('btn-cancel').innerText = newValue;
                 // this.btnCancel.textContent = newValue;
             }
@@ -199,6 +201,18 @@ class CsDialog extends HTMLElement {
         this.btnClose = this.shadowRoot.getElementById('btn-close');
         this.btnCancel = this.shadowRoot.getElementById('btn-cancel');
         this.btnSubmit = this.shadowRoot.getElementById('btn-submit');
+        
+        console.log(this.oktext, this.calcelText, 22222);
+        // 无取消按钮
+        // if(!this.calcelText) {
+        //     this.btnCancel.remove();
+        //     this.shadowRoot.getElementById('dialog-footer').style.display = 'grid';
+        // }
+        // // 无按钮
+        // if(!this.oktext) {
+        //     this.btnSubmit.remove();
+        //     this.shadowRoot.getElementById('dialog-footer').style.display = 'none';
+        // }
         
         this.clientWidth;
         this.shadowRoot.addEventListener('transitionend',(ev)=>{
@@ -251,11 +265,11 @@ export default function() {
     dialog.remove = true;
 
     if( typeof arguments[0] === 'object' ){
-        const { title = '', content = '', oktext = '确定', calcelText = '取消',onOk, onCancel} = Array.prototype.slice.call(arguments)[0];
+        const { title = '', content = '', oktext = '确定', canceltext = '取消', onOk, onCancel} = Array.prototype.slice.call(arguments)[0];
         dialog.title = title;
         dialog.innerHTML = content||'';
         dialog.oktext = oktext;
-        dialog.calcelText = calcelText;
+        dialog.canceltext = canceltext;
         dialog.onsubmit = onOk;
         dialog.oncancel = onCancel;
     }
