@@ -1,0 +1,1 @@
+import{o as a,e,g as o}from"./vendor.e7290a2d.js";const s={},d={class:"demo"},m=[o("cs-demo",{image:"https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg",name:"Ray",email:"Ray@hb.com"},null,-1)];s.render=function(o,s){return a(),e("div",d,m)};export{s as default};
