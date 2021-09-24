@@ -94,6 +94,16 @@
         },
         {
           "version": "0.0.1",
+          "name": "Steps",
+          "sort": 1,
+          "cName": "步骤条",
+          "type": "component",
+          "show": true,
+          "desc": "步骤条",
+          "author": "xsf"
+        },
+        {
+          "version": "0.0.1",
           "name": "Input",
           "sort": 1,
           "cName": "输入框",
