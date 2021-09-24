@@ -1,6 +1,6 @@
 # Cubeshop
 
-[我是使用者](./README.md) ｜ 我是开发者
+[我是使用者 developer](./README.md) ｜ 我是开发者 user
 
 
 ## 官网 & UI 组件如何开发？
