@@ -25,6 +25,18 @@ Cubeshop 是一个基于 Web Components 的跨框架 UI 组件库，输出标准
 
 ## NPM 使用
 
+### 📦 安装
+
+```
+npm install cubeshop
+```
+
+```
+yarn cubeshop
+```
+
+### 🔨使用
+
 ```js
 import 'cubeshop';
 ```
