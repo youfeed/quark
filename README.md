@@ -70,7 +70,7 @@ class Demo extends React.Component {
 
 ##  注意
 
-- Vue 工程中使用组件可能会出现告警：
+> Vue 工程中使用组件可能会出现告警 `Unknown custom element`
 
 ```html
 <!-- vue2: -->
