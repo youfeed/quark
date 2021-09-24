@@ -7,6 +7,7 @@ import path from 'path';
 import config from './package.json';
 const hljs = require('highlight.js'); // https://highlightjs.org/
 const resolve = path.resolve;
+
 // https://vitejs.dev/config/
 export default defineConfig({
   base: '/cubeshop/',

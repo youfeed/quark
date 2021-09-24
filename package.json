@@ -1,19 +1,20 @@
 {
   "name": "cubeshop",
-  "version": "0.0.20",
+  "version": "0.0.22",
   "description": "Mobile UI Components built on Web Components.",
-  "main": "src/index.js",
-  "module": "src/index.js",
-  "unpkg": "src/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "unpkg": "dist/index.js",
   "files": [
-    "src/packages",
-    "src/index.js",
+    "dist/packages",
+    "dist/index.js",
     "README.md",
     "package.json"
   ],
   "scripts": {
     "dev": "npm run checked && vite --open --force",
     "build:site": "npm run checked && vite build && npm run copy",
+    "publish": "rm -rf dist && node cs/publish.js",
     "copy": "node cs/copy.js",
     "checked": "npm run generate:file && tsc",
     "build": "npm run checked && vite build --config vite.config.build.ts && npm run generate:types",
