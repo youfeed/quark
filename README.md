@@ -34,7 +34,7 @@ npm install cubeshop
 ```
 
 ```
-yarn cubeshop
+yarn add cubeshop
 ```
 
 ### 🔨使用
