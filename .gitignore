@@ -3,10 +3,7 @@ node_modules
 /libs
 /cs/upload.js
 yarn.lock
-package-lock.json
 /cache
-/src/csui.ts
-/src/packages/csui.vue.ts
 /.nyc_output
 /coverage
 /tsc/test

@@ -7,28 +7,8 @@ export default class CsStep extends HTMLElement {
     shadowRoot.innerHTML = `
         <style>
           :host {
-            display: flex;
-            align-items: center;
-            // width: 450px;
-            // height: 180px;
-            padding: 10px;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            display: block;
           }
-          .cs-step {
-            flex: 1;
-            text-align: center;
-            font-size: 0;
-          }
-
-          .cs-steps-vertical {
-            height: 100%;
-            -webkit-box-orient: vertical;
-            -webkit-box-direction: normal;
-            -ms-flex-flow: column;
-            flex-flow: column;
-          }
-
           .cs-steps-vertical .cs-step {
             display: flex;
             height: 33.34%;
@@ -36,13 +16,6 @@ export default class CsStep extends HTMLElement {
 
           .cs-step-head {
             position: relative;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            margin-bottom: 12px;
           }
 
           .cs-step-line {
@@ -60,15 +33,7 @@ export default class CsStep extends HTMLElement {
             display: inline-block;
             width: 1px;
             height: 100%;
-            background: #909ca4;
-            background-image:
-              repeating-linear-gradient(
-                0deg,
-                #fff,
-                #fff 1px,
-                #08f 1px,
-                #08f 2px
-              );
+            background: #fa2c19;
           }
 
           .cs-step.cs-step-finish .cs-step-head {
@@ -78,30 +43,16 @@ export default class CsStep extends HTMLElement {
 
           .cs-step.cs-step-finish .cs-step-line {
             background: #fa2c19;
-            background-image:
-              repeating-linear-gradient(
-                0deg,
-                #fff,
-                #fff 1px,
-                #08f 1px,
-                #08f 2px
-              );
           }
 
           .cs-step-icon {
             position: relative;
-            display: -webkit-box;
-            display: -ms-flexbox;
             display: flex;
             width: 25px;
             height: 25px;
             line-height: 25px;
             font-size: 13px;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
             align-items: center;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
             justify-content: center;
             z-index: 1;
           }
@@ -120,8 +71,8 @@ export default class CsStep extends HTMLElement {
           .cs-step-main {
             display: inline-block;
             padding-left: 10%;
-            padding-right: 10%;
             text-align: center;
+            margin-bottom: 30px;
           }
 
           .cs-steps-vertical .cs-step-main {
@@ -160,16 +111,11 @@ export default class CsStep extends HTMLElement {
           .cs-step.cs-step-process .cs-step-icon.is-text {
             background-color: #fa2c19;
           }
-
-          .cs-step:last-child .cs-step-line {
-            display: none;
-          }
         </style>
         <div class="cs-steps cs-steps-vertical">
-          <slot></slot>
           ${
             this.status !== 'doing' &&
-            '<div class="cs-step cs-step-process"><div class="cs-step-head"><div class="cs-step-line"></div><div class="cs-step-icon is-text"><div class="cs-step-inner"><slot></slot></div></div></div><div class="cs-step-main"><div class="cs-step-title"></div><div class="cs-step-content">您的订单正在配送途中</div></div></div>'
+            '<div class="cs-step cs-step-process"><div class="cs-step-head"><div class="cs-step-line"></div><div class="cs-step-icon is-text"><div class="cs-step-inner"><slot></slot></div></div></div><div class="cs-step-main"><div class="cs-step-title">title</div><div class="cs-step-content">您的订单正在配送途中</div></div></div>'
           }
         </div>
         `;
@@ -207,20 +153,49 @@ export default class CsStep extends HTMLElement {
   }
 
   attributeChangedCallback(name, oldValue, newValue) {
-    // if (name == 'loading' && this.btn) {
-    //   if (newValue !== null) {
-    //     this.shadowRoot.prepend(this.load);
-    //     this.btn.setAttribute('disabled', 'disabled');
-    //   }
-    // }
-    // if (name == 'href' && this.btn) {
-    //   if (!this.disabled) {
-    //     this.btn.href = newValue;
-    //   }
-    // }
   }
 }
 
 if (!customElements.get('cs-step')) {
   customElements.define('cs-step', CsStep);
+}
+
+class CsSteps extends HTMLElement {
+  static get observedAttributes() { return ['direction']; }
+
+  constructor() {
+    super();
+    const shadowRoot = this.attachShadow({ mode: 'open' });
+    shadowRoot.innerHTML = `
+      <style>
+        ::slotted(cs-step .cs-step-line) {
+          // display: none;
+          color: red;
+          border: 1px solid red;
+        }
+      </style>
+      <div class="cs-steps ${this.direction === 'vertical' ? 'cs-steps-vertical' : 'cs-steps-horizontal'}">
+        ${this.direction}
+        <slot></slot>
+      </div>
+    `;
+  }
+
+  get direction() {
+    console.log(2);
+    return this.getAttribute('direction');
+  }
+
+  set direction(value) {
+    console.log(1);
+    this.setAttribute('direction', value);
+  }
+
+  connectedCallback(){
+    console.log(this.direction, 88);
+  }
+}
+
+if (!customElements.get('cs-steps')) {
+  customElements.define('cs-steps', CsSteps);
 }
