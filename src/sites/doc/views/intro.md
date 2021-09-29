@@ -17,10 +17,11 @@ plugins: [
     libraryDirectory: 'lib',
   }, 'cubeshop']
 ]
+
 ```
 ```tsx
-import {Button, WCUse} from 'cubeshop';
-WCUse(Button)
+import { CSButton, WCUse } from 'cubeshop';
+WCUse(CSButton); // 待优化，这行计划后面版本删除
 
 <cs-button type="primary">按钮</cs-button>
 ```
