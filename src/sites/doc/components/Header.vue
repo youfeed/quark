@@ -21,6 +21,18 @@
               {{ item.cName }}
             </a>
           </li>
+
+          <li class="nav-item">
+            <a
+              class="user-link"
+              target="_blank"
+              href="https://gitlab.hellobike.cn/Yorozuya/cubeshop"
+            >
+              Github
+              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="__dumi-default-external-link-icon"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path><polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg>
+            </a>
+          </li>
+
           <li class="nav-item">
             <div
               @focus="handleFocus"
@@ -48,12 +60,9 @@
               </transition>
             </div>
           </li>
+          
           <li class="nav-item">
-            <a
-              class="user-link"
-              target="_blank"
-              href="https://github.com/allan2coder/cubeshop"
-            ></a>
+            <dark-mode class="dark-btn"></dark-mode> 
           </li>
         </ul>
       </div>
@@ -157,11 +166,15 @@ export default defineComponent({
     font-size: 20px;
   }
 }
+.dark-btn{
+  display: inline-block;
+  vertical-align: middle;
+}
 .header {
   &-logo {
     position: relative;
     display: inline-block;
-    width: 240px;
+    width: 100px;
     height: 64px;
     .logo-link {
       width: 120px;
@@ -194,11 +207,10 @@ export default defineComponent({
     justify-content: space-between;
     align-items: center;
     float: right;
-    width: calc(100% - 240px);
+    width: calc(100% - 122px);
     min-width: 900px;
     padding: 0 40px;
     .nav-box {
-      margin-right: 140px;
       .nav-list {
         display: flex;
         list-style: none;
@@ -209,14 +221,8 @@ export default defineComponent({
         position: relative;
         margin-right: 30px;
         font-size: 14px;
-        height: 63px;
-        line-height: 63px;
         text-align: center;
         cursor: pointer;
-        a {
-          display: inline-block;
-          line-height: 64px;
-        }
         &.active {
           font-weight: bold;
         }
@@ -225,17 +231,10 @@ export default defineComponent({
         }
       }
       .user-link {
-        display: inline-block;
-        width: 26px;
-        height: 26px;
-        vertical-align: middle;
-        background-repeat: no-repeat;
-        background-image: url('../../assets/images/icon-user.png');
-        background-size: 26px;
-
-        &.gitee {
-          margin-left: 8px;
-          background-image: url('../../assets/images/icon-gitee.png');
+        display: flex;
+        align-items: center;
+        svg{
+          margin-left: 6px;
         }
       }
     }
@@ -284,75 +283,6 @@ export default defineComponent({
 }
 // 颜色
 .doc-header {
-  // 红色
-  &-red {
-    background-image: $theme-red-header-bg;
-    color: $theme-red-word;
-    .header {
-      &-nav {
-        .search-box {
-          .search-input {
-            color: $theme-red-word;
-            background-position: 0 0;
-            &::-webkit-input-placeholder {
-              color: $theme-red-input;
-            }
-          }
-        }
-        .nav-box {
-          .nav-item {
-            color: $theme-red-word;
-            a {
-              color: $theme-red-word;
-            }
-            &.active {
-              color: $theme-red-actice;
-              &:after {
-                background-position: 0 0;
-              }
-              a {
-                color: $theme-red-actice;
-              }
-            }
-          }
-          .user-link {
-            background-position: 0 0;
-            // &:hover {
-            //   background-position: -26px 0;
-            // }
-          }
-        }
-      }
-    }
-    .header-select {
-      &-box {
-        &.select-down {
-          .header-select-hd {
-            background-image: url('../../assets/images/icon-select-white-down.png');
-          }
-        }
-        &.select-up {
-          .header-select-hd {
-            background-image: url('../../assets/images/icon-select-white-up.png');
-          }
-        }
-      }
-      &-hd {
-        color: $theme-red-word;
-        border: 1px solid $theme-white-select-border;
-      }
-      &-bd {
-        color: $theme-white-select-word;
-      }
-      &-item {
-        border-color: $theme-red-select-border;
-        background-color: $theme-red-select-bg;
-        &:hover {
-          color: $theme-red;
-        }
-      }
-    }
-  }
   // 白色
   &-white {
     background: $white;
@@ -361,8 +291,8 @@ export default defineComponent({
     .header {
       &-logo {
         .logo-link {
-          background: url('../../assets/images/logo-header-red.png') no-repeat
-            center/100%;
+            background: url(/cubeshop/src/sites/assets/images/logo.png) no-repeat center;
+            background-size: 35%;
         }
         .logo-border {
           background: $theme-white-border;
@@ -372,7 +302,7 @@ export default defineComponent({
         .search-box {
           .search-input {
             color: $theme-white-word;
-            background-position: 0 -22px;
+            background-position: 0;
             &::-webkit-input-placeholder {
               color: $theme-white-input;
             }
@@ -394,11 +324,8 @@ export default defineComponent({
               }
             }
           }
-          .user-link {
-            background-position: 0 -25px;
-            // &:hover {
-            //   background-position: -26px -25px;
-            // }
+          .user-link:hover{
+            color: #7060bf;
           }
         }
       }
@@ -428,78 +355,6 @@ export default defineComponent({
         background-color: $theme-white-select-bg;
         &:hover {
           color: $theme-white-actice;
-        }
-      }
-    }
-  }
-  // 黑色
-  &-black {
-    background: $black;
-    color: $theme-black-word;
-    border-bottom: 1px solid $theme-black-box-border;
-    .header {
-      &-nav {
-        .search-box {
-          .search-input {
-            color: $theme-black-word;
-            background-position: 0 -44px;
-            &::-webkit-input-placeholder {
-              color: $theme-black-input;
-            }
-          }
-        }
-        .nav-box {
-          .nav-item {
-            color: $theme-black-word;
-            a {
-              color: $theme-black-word;
-            }
-            &.active {
-              color: $theme-black-actice;
-              &:after {
-                background-position: 0 -13px;
-              }
-              a {
-                color: $theme-black-actice;
-              }
-            }
-          }
-          .user-link {
-            background-position: 0 -51px;
-            // &:hover {
-            //   background-position: -26px -51px;
-            // }
-          }
-        }
-      }
-    }
-    .header-select {
-      &-box {
-        &.select-down {
-          .header-select-hd {
-            background-image: url('../../assets/images/icon-select-white-down.png');
-          }
-        }
-        &.select-up {
-          .header-select-hd {
-            background-image: url('../../assets/images/icon-select-white-up.png');
-          }
-        }
-      }
-      &-hd {
-        color: $theme-black-select-word;
-        background-color: $theme-black-select-bg;
-        border: 1px solid $theme-black-select-border;
-      }
-      &-bd {
-        color: $theme-black-select-word;
-      }
-      &-item {
-        background-color: $theme-black-select-bg;
-        border-color: $theme-black-select-bg;
-        &:hover {
-          background-color: $theme-black-select-hover;
-          border-color: $theme-black-select-hover;
         }
       }
     }

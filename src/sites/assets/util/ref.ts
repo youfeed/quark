@@ -15,7 +15,7 @@ export class RefData {
 
   public currentRoute: Ref<string> = ref('/');
 
-  private _themeColor: Ref<string> = ref('black');
+  private _themeColor: Ref<string> = ref('white');
   public get themeColor(): Ref<string> {
     return this._themeColor;
   }

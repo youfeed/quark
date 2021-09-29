@@ -126,15 +126,15 @@ export default {
         items: [{
           image: 'https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg',
           name: 'Allan',
-          email: 'Allan@hb.com',
+          email: 'Allan@hx.com',
         },{
           image: 'https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg',
           name: 'stark',
-          email: 'stark@hb.com',
+          email: 'stark@hx.com',
         },{
           image: 'https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg',
           name: 'Ray',
-          email: 'Ray@hb.com',
+          email: 'Ray@hx.com',
         }],
         msg: 'test'
       },
@@ -174,7 +174,7 @@ export default {
             <cs-card
               image='https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg'
               name='Ray'
-              email="Ray@hb.com"
+              email="Ray@hx.com"
             ></cs-card>
           </div>
         );

@@ -132,11 +132,7 @@ export default defineComponent({
     padding-left: 42px;
     font-size: 14px;
     vertical-align: middle;
-    background-color: transparent;
-    background-image: url('../../assets/images/input-search.png');
-    background-repeat: no-repeat;
-    font-size: 14px;
-    color: #fff;
+    background: url(/cubeshop/src/sites/assets/images/input-search.png) no-repeat center;
     &:focus {
       outline: none;
     }
