@@ -1,1 +1,1 @@
-{"version":3,"sources":["../../src/packages/w-c-use/index.js"],"names":["args"],"mappings":"AAAA,eAAe,UAAS,GAAGA,IAAZ,EAAkB,CAAE","sourcesContent":["export default function(...args) {}"],"file":"index.js"}
+{"version":3,"sources":["../../src/packages/w-c-use/index.js"],"names":[],"mappings":";;;;;AAAe,oBAAkB,CAAE","sourcesContent":["export default function(...args) {}"],"file":"index.js"}
