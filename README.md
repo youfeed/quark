@@ -30,22 +30,16 @@ Cubeshop 是一个基于 Web Components 的跨框架 UI 组件库，输出标准
 ### 📦 安装
 
 ```
-npm install cubeshop
+npm install cubeshop // or yarn add cubeshop
 ```
 
-```
-yarn add cubeshop
-```
 
 ### 🔨使用
 
-#### 按需加载
-```js
-// cubeshop 暴露以下组件： Button、Card、Loading、Icon、Tab、Dialog、Steps、Input
-import {Button, WCUse} from 'cubeshop'
-WCUse(Button)
+#### 1、按需加载
 
-// babel.config.js 添加如下配置， 依赖babel-plugin-import插件
+babel.config.js 添加如下配置， 依赖 `babel-plugin-import` 插件
+```tsx
 plugins: [
   ['import', {
     libraryName: 'cubeshop',
@@ -54,7 +48,14 @@ plugins: [
 ]
 ```
 
-#### 全量加载
+```tsx
+import { CSButton, WCUse } from 'cubeshop'
+WCUse(CSButton)
+
+<cs-button type="primary">button</cs-button>
+```
+
+#### 2、全量加载
 ```js
 import 'cubeshop';
 ```
