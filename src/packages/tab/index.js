@@ -1,4 +1,4 @@
-import '../button/cs-button.mjs';
+import '../button/index.js';
 
 class CsTabContent extends HTMLElement {
     static get observedAttributes() { return ["label","key","disabled","icon"]; }

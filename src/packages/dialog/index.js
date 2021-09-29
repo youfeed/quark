@@ -1,4 +1,4 @@
-import '../button/cs-button.mjs';
+import '../button/index.js';
 
 class CsDialog extends HTMLElement {
 

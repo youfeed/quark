@@ -1,5 +1,5 @@
-import '../loading/cs-loading.mjs';
-import '../icon/cs-icon.mjs';
+import '../loading/index.js';
+import '../icon/index.js';
 
 export default class CsButton extends HTMLElement {
     static get observedAttributes() { return ['disabled','icon','loading','href'] }

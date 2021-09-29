@@ -26,11 +26,12 @@
 </template>
 
 <script>
+import Dialog from './index.js'
   export default {
     methods: {
       // 基础弹窗
       showDialog() {
-          CsDialog({
+          Dialog({
             title: '这是一个标题',
             content: '支持函数调用、组件调用 2 种方式。',
             oktext: '确定按钮',
@@ -41,7 +42,7 @@
       },
       // 无标题弹窗
       showDialog2() {
-        CsDialog({
+        Dialog({
           content: '支持函数调用、组件调用 2 种方式。',
           oktext: '确定按钮',
           canceltext: '取消按钮',
@@ -55,7 +56,7 @@
       },
       // TODO：无取消按钮
       showDialog4() {
-        CsDialog({
+        Dialog({
           title: '这是一个标题',
           content: '支持函数调用、组件调用 2 种方式。',
         });

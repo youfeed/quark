@@ -59,7 +59,7 @@ export default class CsIcon extends HTMLElement {
 
 	attributeChangedCallback (name, oldValue, newValue) {
 		if( name == 'name' && this.use){
-			this.use.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', `./iconfont/icon.svg#icon-${newValue}`);
+			this.use.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', `../iconfont/icon.svg#icon-${newValue}`);
 		}
 		if( name == 'color' && this.icon){
 			this.icon.style.color = newValue;

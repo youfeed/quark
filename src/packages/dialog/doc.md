@@ -13,11 +13,12 @@
 <cs-button type="primary" @click="showDialog2()">无标题弹窗</cs-button>
 
 <script>
+import Dialog from './index.js'
 export default {
     methods: {
         // 基础弹窗
         showDialog() {
-            CsDialog({
+            Dialog({
                 title: '这是一个标题',
                 content: '支持函数调用、组件调用 2 种方式。',
                 oktext: '确定按钮',
@@ -28,7 +29,7 @@ export default {
         },
         // 无标题弹窗
         showDialog2() {
-            CsDialog({
+            Dialog({
                 content: '支持函数调用、组件调用 2 种方式。',
                 oktext: '确定按钮',
                 canceltext: '取消按钮',

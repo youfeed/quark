@@ -1,4 +1,4 @@
-class CsCard extends HTMLElement {
+export default class CsCard extends HTMLElement {
   // Specify observed attributes so that
   // attributeChangedCallback will work
   static get observedAttributes() { return ['title','content','cash','desc'] }

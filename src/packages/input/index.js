@@ -1,6 +1,5 @@
-import '../tips/cs-tips.mjs';
-import '../button/cs-button.mjs';
 
+import '../button/index.js';
 export default class CsInput extends HTMLElement {
 
     static get observedAttributes() { return ['label','disabled','pattern','required','readonly','placeholder'] }
@@ -22,10 +21,6 @@ export default class CsInput extends HTMLElement {
             padding: .25em .625em;
             color: var(--fontColor,#333);
             font-size: 14px;
-            background: #fff;
-        }
-        :host(:focus-within){
-            /*box-shadow: 0 0 10px rgba(0,0,0,0.1);*/
         }
         :host([block]){
             display:block
@@ -44,10 +39,6 @@ export default class CsInput extends HTMLElement {
             opacity:.8;
             cursor:not-allowed; 
         }
-        :host([disabled]) cs-tips{
-            pointer-events:none;
-            background:rgba(0,0,0,.1);
-        }
         :host([label]) .input::placeholder{
             color:transparent;
         }
@@ -57,21 +48,6 @@ export default class CsInput extends HTMLElement {
         :host(cs-textarea){
             line-height:1.5;
             padding-right:.25em;
-        }
-        cs-tips{  
-            display:flex;
-            width: 100%;
-            height: 100%;
-            align-items:center;
-            margin:-.25em -.625em;
-            padding:.25em .625em;
-            font-family:inherit;
-            transition:.3s background-color;
-        }
-        :host(cs-textarea) cs-tips{
-            margin-right:-.25em;
-            padding-right:.25em;
-            align-items:flex-start;
         }
         .input{
             padding:0;
@@ -179,17 +155,15 @@ export default class CsInput extends HTMLElement {
             }
         }
         </style>
-        <cs-tips id="input-con" dir="${this.errordir}" type="error">
+        <div id="input-con" dir="${this.errordir}" type="error">
             ${
                 this.icon?
                 '<cs-icon class="icon-pre" name='+this.icon+'></cs-icon>'
                 :
                 ''
             }
-
             <${multi?'textarea':'input'} id="input" name="${this.name}" class="input" ${this.type === 'number'?'min="'+this.min+'" max="'+this.max+'" step="'+this.step+'"':""} value="${this.defaultvalue}" type="${this.typeMap(this.type)}" placeholder="${this.placeholder}" minlength="${this.minlength}" rows="${this.rows}" maxlength="${this.maxlength}">${multi?'</textarea>':''}
             <slot></slot>
-            
             ${
                 this.label&&!this.icon?
                 '<label class="input-label">'+this.label+'</label>'
@@ -214,7 +188,7 @@ export default class CsInput extends HTMLElement {
                 :
                 ''
             }
-        </cs-tips>
+        </div>
         `
         this.input = shadowRoot.getElementById('input');
     }
@@ -605,14 +579,6 @@ export default class CsInput extends HTMLElement {
 
     set value(value) {
         this.input.value = value;
-        /*
-        this.checkValidity();
-        this.dispatchEvent(new CustomEvent('change',{
-            detail:{
-                value:this.value
-            }
-        }));
-        */
     }
 
     attributeChangedCallback (name, oldValue, newValue) {
