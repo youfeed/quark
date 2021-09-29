@@ -34,13 +34,13 @@
         <li class="features-item">
           <p class="features-title">技术栈无关</p>
           <p class="features-desc a-l">
-            基于 Web Components 的跨框架 UI 组件库，输出标准的 Custom Element，组件可以同时在 React、Vue、Preact、Angular 或 原生 JS 等任意框架或无框架中使用。
+            输出标准的 Custom Element，组件可以同时在 React、Vue、Preact、Angular 或 原生 JS 等任意框架或无框架中使用。
           </p>
         </li>
         <li class="features-item">
           <p class="features-title">不依赖第三方库或框架</p>
           <p class="features-desc">
-            Web Components 可以在不需要引入第三方的库或者框架的情况下通过浏览器的这套 API 创建可复用的组件，也可以和任意与 HTML 交互的 JavaScript 库和框架搭配使用。
+            不需要引入第三方的库或者框架的情况下，通过浏览器 API 创建可复用的组件，也可以和任意与 HTML 交互的 JavaScript 库和框架搭配使用。
           </p>
         </li>
       </ul>
