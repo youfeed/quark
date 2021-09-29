@@ -1,13 +1,13 @@
 {
   "name": "cubeshop",
-  "version": "0.0.24",
+  "version": "0.0.25",
   "description": "Mobile UI Components built on Web Components.",
-  "main": "dist/index.js",
-  "module": "dist/index.js",
-  "unpkg": "dist/index.js",
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "unpkg": "lib/index.js",
   "files": [
-    "dist/packages",
-    "dist/index.js",
+    "lib/*",
+    "es/*",
     "README.md",
     "package.json"
   ],
