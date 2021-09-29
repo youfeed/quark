@@ -1,1 +1,0 @@
-import{_ as a}from"./index.bec48952.js";import{e,o,g as s}from"./vendor.773011cc.js";const m={},r={class:"demo"},c=[s("cs-demo",{image:"https://cdn.pixabay.com/photo/2021/08/25/20/42/field-6574455_960_720.jpg",name:"Ray",email:"Ray@hx.com"},null,-1)];var n=a(m,[["render",function(a,s){return o(),e("div",r,c)}]]);export{n as default};
